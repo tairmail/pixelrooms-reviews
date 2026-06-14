@@ -1,0 +1,32 @@
+name: Daily review sync
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pull latest reviews
+        env:
+          FEATURABLE_WIDGET_ID: ${{ secrets.FEATURABLE_WIDGET_ID }}
+        run: node scripts/sync.js
+
+      - name: Commit if reviews changed
+        run: |
+          git config user.name "review-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/reviews.json
+          git diff --cached --quiet || git commit -m "chore: daily review sync $(date -u +%F)"
+          git push
