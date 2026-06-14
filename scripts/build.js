@@ -113,6 +113,7 @@ const html = `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(business.name)} Reviews — ${avg}★ from ${reviews.length} Customers | Glendale, CA</title>
 <meta name="description" content="${esc(`${business.name} customer reviews: rated ${avg} out of 5 from ${reviews.length} Google reviews. Interactive LED floor games, laser maze and more at Glendale Galleria, Los Angeles.`)}">
+<meta name="google-site-verification" content="FGSr4hoKCs9wHegYrMHIvyoULIL0Qx-l1KDRJc8H7bs">
 <link rel="canonical" href="${SITE}/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta property="og:type" content="website">
