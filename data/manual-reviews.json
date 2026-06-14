@@ -1,0 +1,14 @@
+{
+  "_readme": "Yelp prohibits automated scraping and its API only returns 3 short excerpts, so Yelp reviews are curated here by hand. Add entries below; the build picks them up automatically and dedupes by id. Keep id unique, e.g. yelp:001.",
+  "reviews": [
+    {
+      "id": "yelp:example-001",
+      "source": "yelp",
+      "author": "Replace Me",
+      "rating": 5,
+      "text": "Replace this with a real Yelp review excerpt, then delete the sample flag.",
+      "date": "2026-01-15",
+      "sample": true
+    }
+  ]
+}

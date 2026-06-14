@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "lastSync": "2026-06-10T12:00:00.000Z",
+    "totalReviews": 6,
+    "averageRating": 4.8,
+    "sample": true
+  },
+  "reviews": [
+    {
+      "id": "google:sample-1",
+      "source": "google",
+      "author": "Maria G.",
+      "rating": 5,
+      "text": "Took my kids here for a birthday party and they didn't want to leave. The LED floor games are genuinely fun for adults too — Floor Is Lava got competitive fast.",
+      "date": "2026-05-28",
+      "sample": true
+    },
+    {
+      "id": "google:sample-2",
+      "source": "google",
+      "author": "Devon R.",
+      "rating": 5,
+      "text": "The laser maze is the best I've tried in LA. Staff were friendly and reset the games quickly. Great location inside Glendale Galleria.",
+      "date": "2026-05-19",
+      "sample": true
+    },
+    {
+      "id": "google:sample-3",
+      "source": "google",
+      "author": "Anna K.",
+      "rating": 4,
+      "text": "Really fun hour with friends. Button Matrix was our favorite. Only note: weekends get busy, book ahead.",
+      "date": "2026-05-02",
+      "sample": true
+    },
+    {
+      "id": "google:sample-4",
+      "source": "google",
+      "author": "James T.",
+      "rating": 5,
+      "text": "Perfect for a team outing. We did Pixel Duel tournaments for two hours. Clean, modern, well run.",
+      "date": "2026-04-21",
+      "sample": true
+    },
+    {
+      "id": "google:sample-5",
+      "source": "google",
+      "author": "Sofia M.",
+      "rating": 5,
+      "text": "My 7-year-old calls this the best place in the mall. The pixel floor reacts to every step — kids are mesmerized.",
+      "date": "2026-04-10",
+      "sample": true
+    },
+    {
+      "id": "google:sample-6",
+      "source": "google",
+      "author": "Leo P.",
+      "rating": 5,
+      "text": "Swoosh Hoops is addictive. Came for 30 minutes, stayed for two hours. Will be back with the office crew.",
+      "date": "2026-03-30",
+      "sample": true
+    }
+  ]
+}

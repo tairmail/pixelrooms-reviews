@@ -1,0 +1,27 @@
+{
+  "name": "Pixel Rooms",
+  "legalName": "Pixel Rooms",
+  "url": "https://pixelrooms.com",
+  "reviewsSiteUrl": "https://reviews.pixelrooms.com",
+  "description": "Pixel Rooms is an interactive entertainment venue at Glendale Galleria, Los Angeles, featuring a giant LED pixel floor, laser maze, Swoosh Hoops and Button Matrix games for groups, families and parties.",
+  "telephone": "",
+  "priceRange": "$$",
+  "address": {
+    "streetAddress": "3227 Glendale Galleria",
+    "addressLocality": "Glendale",
+    "addressRegion": "CA",
+    "postalCode": "91210",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "latitude": 34.1443,
+    "longitude": -118.2585
+  },
+  "sameAs": [
+    "https://pixelrooms.com",
+    "https://www.google.com/maps"
+  ],
+  "googleMapsUrl": "https://www.google.com/maps",
+  "yelpUrl": "",
+  "category": "AmusementPark"
+}
