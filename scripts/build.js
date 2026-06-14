@@ -23,21 +23,16 @@ const reviews = [...byId.values()]
   .filter((r) => r.rating && r.text)
   .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
-const avg =
-  reviews.length > 0
-    ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviews.length) * 10) / 10
-    : 0;
+const avg = reviews.length > 0
+  ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviews.length) * 10) / 10
+  : 0;
 
 const SITE = business.reviewsSiteUrl.replace(/\/$/, "");
 const today = new Date().toISOString().slice(0, 10);
 const isSample = !!(store.meta && store.meta.sample);
+const WRITE_REVIEW_URL = "https://g.page/r/Cc0tpw6mbLDJEBM/review";
 
-const esc = (s) =>
-  String(s || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+const esc = (s) => String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
 const fmtDate = (iso) => {
   if (!iso) return "";
@@ -46,43 +41,36 @@ const fmtDate = (iso) => {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 };
 
-// Google Maps style yellow stars
 const starSvg = (sz, color) =>
   `<svg width="${sz}" height="${sz}" viewBox="0 0 24 24" fill="${color}" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.9 8.9H23l-7.5 5.4 2.9 8.9L12 19.8l-6.4 5.4 2.9-8.9L1 10.9h8.1z"/></svg>`;
 
 const googleStars = (rating, size) => {
-  const sz = size === "lg" ? 26 : size === "md" ? 18 : 14;
+  const sz = size === "lg" ? 28 : size === "md" ? 18 : 14;
   return `<span class="stars stars-${size}" role="img" aria-label="Rated ${rating} out of 5">` +
-    [1,2,3,4,5].map(i => starSvg(sz, i <= rating ? "#FBBC04" : "#E0E0E0")).join("") +
+    [1,2,3,4,5].map(i => starSvg(sz, i <= rating ? "#FBBC04" : "#3a3f6e")).join("") +
   `</span>`;
 };
 
-// Avatar: coloured circle with initial, Google Maps style
-const AVATAR_COLORS = ["#4285F4","#EA4335","#34A853","#FF6D00","#9C27B0","#00BCD4","#795548","#607D8B"];
+const AVATAR_COLORS = ["#4285F4","#EA4335","#34A853","#FF6D00","#9C27B0","#00BCD4","#E91E63","#FF5722"];
 const avatarColor = (name) => AVATAR_COLORS[(name || "?").charCodeAt(0) % AVATAR_COLORS.length];
 const avatarInitial = (name) => (name || "?")[0].toUpperCase();
 const avatar = (name) =>
   `<span class="avatar" style="background:${avatarColor(name)}" aria-hidden="true">${avatarInitial(name)}</span>`;
 
-// ---------- JSON-LD ----------
+// JSON-LD
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", business.category || "EntertainmentBusiness"],
   "@id": business.url + "/#business",
-  name: business.name,
-  url: business.url,
-  description: business.description,
+  name: business.name, url: business.url, description: business.description,
   priceRange: business.priceRange || undefined,
   telephone: business.telephone || undefined,
   address: { "@type": "PostalAddress", ...business.address },
-  geo: business.geo
-    ? { "@type": "GeoCoordinates", latitude: business.geo.latitude, longitude: business.geo.longitude }
-    : undefined,
+  geo: business.geo ? { "@type": "GeoCoordinates", latitude: business.geo.latitude, longitude: business.geo.longitude } : undefined,
   sameAs: business.sameAs,
-  aggregateRating:
-    reviews.length > 0
-      ? { "@type": "AggregateRating", ratingValue: avg, reviewCount: reviews.length, bestRating: 5, worstRating: 1 }
-      : undefined,
+  aggregateRating: reviews.length > 0
+    ? { "@type": "AggregateRating", ratingValue: avg, reviewCount: reviews.length, bestRating: 5, worstRating: 1 }
+    : undefined,
   review: reviews.slice(0, 30).map((r) => ({
     "@type": "Review",
     author: { "@type": "Person", name: r.author },
@@ -94,10 +82,8 @@ const jsonLd = {
 const cleanLd = JSON.parse(JSON.stringify(jsonLd));
 
 const webPageLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": SITE + "/#webpage",
-  url: SITE + "/",
+  "@context": "https://schema.org", "@type": "WebPage",
+  "@id": SITE + "/#webpage", url: SITE + "/",
   name: `${business.name} Reviews — Customer Ratings`,
   description: `Read ${reviews.length} verified customer reviews of ${business.name}. Average rating ${avg} out of 5.`,
   dateModified: today,
@@ -105,28 +91,21 @@ const webPageLd = {
   isPartOf: { "@type": "WebSite", url: SITE + "/", name: `${business.name} Reviews` },
 };
 
-// ---------- Review cards ----------
 const sourceLabel = { google: "Google", yelp: "Yelp" };
 
-const reviewCards = reviews
-  .map((r) => `
-    <article class="card">
-      <div class="card-header">
-        ${avatar(r.author)}
-        <div class="card-meta">
-          <span class="author">${esc(r.author)}</span>
-          ${r.date ? `<time datetime="${esc(r.date)}">${esc(fmtDate(r.date))}</time>` : ""}
-        </div>
-        <span class="badge badge-${esc(r.source)}" title="${esc(sourceLabel[r.source] || r.source)}">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </span>
+const reviewCards = reviews.map((r) => `
+  <article class="card">
+    <div class="card-header">
+      ${avatar(r.author)}
+      <div class="card-meta">
+        <span class="author">${esc(r.author)}</span>
+        ${r.date ? `<time datetime="${esc(r.date)}">${esc(fmtDate(r.date))}</time>` : ""}
       </div>
-      <div class="card-stars">${googleStars(r.rating, "sm")}</div>
-      <p class="review-text">${esc(r.text)}</p>
-    </article>`)
-  .join("\n");
+    </div>
+    <div class="card-stars">${googleStars(r.rating, "sm")}</div>
+    <p class="review-text">${esc(r.text)}</p>
+  </article>`).join("\n");
 
-// ---------- HTML ----------
 const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -140,109 +119,235 @@ const html = `<!doctype html>
 <meta property="og:title" content="${esc(business.name)} Reviews — ${avg}★ from ${reviews.length} customers">
 <meta property="og:description" content="${esc(business.description)}">
 <meta property="og:url" content="${SITE}/">
-<meta property="og:site_name" content="${esc(business.name)} Reviews">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">${JSON.stringify(cleanLd)}</script>
 <script type="application/ld+json">${JSON.stringify(webPageLd)}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F8F9FA; --ink:#202124; --muted:#70757A; --card:#FFFFFF;
-  --line:#DADCE0; --blue:#1A73E8; --star:#FBBC04;
+:root {
+  --bg: #080c24;
+  --bg2: #0d1235;
+  --card-dark: #111638;
+  --card-light: #ffffff;
+  --border: #1e2550;
+  --ink: #ffffff;
+  --ink-dark: #14161A;
+  --muted: #8890bb;
+  --muted-dark: #5a6270;
+  --red: #E8192C;
+  --yellow: #FBBC04;
+  --purple: #c653ff;
+  --cyan: #00d4ff;
+  --orange: #ff7a00;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font:15px/1.6 Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:700px;margin:0 auto;padding:0 20px}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-/* Header */
-header.site{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-header.site .wrap{display:flex;align-items:center;gap:10px;padding:12px 20px}
-.glyph{display:grid;grid-template-columns:repeat(2,7px);grid-template-rows:repeat(2,7px);gap:2px}
-.glyph i{border-radius:1.5px}
-.glyph i:nth-child(1){background:#4285F4}
-.glyph i:nth-child(2){background:#EA4335}
-.glyph i:nth-child(3){background:#FBBC04}
-.glyph i:nth-child(4){background:#34A853}
-.brand{font-family:"Google Sans",sans-serif;font-weight:500;font-size:16px;color:var(--ink)}
-.brand span{color:var(--muted);font-weight:400}
+/* HEADER */
+header.site {
+  background: var(--red);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 20px rgba(232,25,44,0.4);
+}
+header.site .inner {
+  max-width: 820px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 13px 20px;
+}
+.logo {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700; font-size: 20px;
+  color: #fff; text-decoration: none; letter-spacing: .04em;
+}
+.logo span { color: rgba(255,255,255,0.65); font-weight: 500; font-size: 14px; margin-left: 6px; }
+.header-link {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700; font-size: 13px;
+  color: #fff; text-decoration: none;
+  letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.45);
+  padding: 6px 16px; border-radius: 4px;
+  transition: background .15s;
+}
+.header-link:hover { background: rgba(255,255,255,0.15); }
 
-/* Hero */
-.hero{background:var(--card);border-bottom:1px solid var(--line);padding:32px 20px 28px;text-align:center}
-.hero h1{font-family:"Google Sans",sans-serif;font-weight:700;font-size:clamp(22px,4vw,30px);color:var(--ink);margin-bottom:20px}
-.score-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
-.score{font-family:"Google Sans",sans-serif;font-weight:700;font-size:64px;line-height:1;color:var(--ink)}
-.score-right{text-align:left}
-.stars.stars-lg{display:flex;gap:3px;margin-bottom:4px}
-.count{color:var(--muted);font-size:14px}
-.sources{margin-top:20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.sources a{font-size:14px;color:var(--blue);text-decoration:none;border:1px solid var(--line);background:var(--card);padding:7px 18px;border-radius:20px;font-family:"Google Sans",sans-serif;font-weight:500;transition:background .15s}
-.sources a:hover{background:#F1F3F4}
+/* HERO */
+.hero {
+  background: var(--bg2);
+  padding: 52px 20px 44px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(198,83,255,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(0,212,255,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.2; color: #fff; margin-bottom: 32px;
+  letter-spacing: .01em;
+}
+.hero h1 em { color: var(--yellow); font-style: normal; }
 
-/* Cards */
-main{padding:16px 0 64px}
-.section-label{font-family:"Google Sans",sans-serif;font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 0 12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px}
-.card-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Google Sans",sans-serif;font-weight:700;font-size:17px;color:#fff;flex-shrink:0}
-.card-meta{flex:1;min-width:0}
-.card-meta .author{display:block;font-family:"Google Sans",sans-serif;font-weight:500;font-size:15px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card-meta time{font-size:13px;color:var(--muted)}
-.badge{margin-left:auto;flex-shrink:0;opacity:.85}
-.card-stars{display:flex;align-items:center;gap:2px;margin-bottom:10px}
-.stars{display:inline-flex;align-items:center}
-.review-text{font-size:15px;color:var(--ink);line-height:1.55}
+.score-block {
+  display: inline-flex; align-items: center;
+  gap: 24px; flex-wrap: wrap; justify-content: center;
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 40px;
+  position: relative;
+}
+.score-block::before {
+  content: '';
+  position: absolute; inset: -1px; border-radius: 16px;
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+  z-index: -1; opacity: .4;
+}
+.score-num {
+  font-family: 'Rajdhani', sans-serif; font-weight: 700;
+  font-size: 64px; line-height: 1;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.score-right { text-align: left; }
+.stars { display: inline-flex; align-items: center; gap: 2px; }
+.score-count {
+  color: var(--muted); font-size: 13px; margin-top: 4px;
+  font-family: 'Rajdhani', sans-serif; font-weight: 500; letter-spacing: .02em;
+}
+
+/* CARDS */
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+main { padding: 32px 0 64px; }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 14px;
+}
+@media (max-width: 620px) { .cards-grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--card-light);
+  border: 1px solid #e0e3ee;
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: box-shadow .2s;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.card-header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+}
+.avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Rajdhani', sans-serif; font-weight: 700;
+  font-size: 16px; color: #fff; flex-shrink: 0;
+}
+.card-meta { flex: 1; min-width: 0; }
+.card-meta .author {
+  display: block; font-family: 'Rajdhani', sans-serif;
+  font-weight: 700; font-size: 15px; color: var(--ink-dark);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card-meta time { font-size: 12px; color: var(--muted-dark); }
+.card-stars { margin-bottom: 10px; }
+.review-text { font-size: 14px; color: #333; line-height: 1.6; }
 
 /* CTA */
-.cta{margin-top:28px;text-align:center;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:28px 22px}
-.cta h2{font-family:"Google Sans",sans-serif;font-weight:700;font-size:20px;color:var(--ink);margin-bottom:8px}
-.cta p{color:var(--muted);font-size:15px;margin-bottom:18px}
-.cta a.btn{display:inline-flex;align-items:center;gap:8px;font-family:"Google Sans",sans-serif;font-weight:500;font-size:15px;color:#fff;text-decoration:none;padding:10px 22px;border-radius:24px;background:var(--blue)}
-.cta a.btn:hover{background:#1558B0}
+.cta {
+  margin-top: 40px;
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 24px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(251,188,4,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta h2 {
+  font-family: 'Rajdhani', sans-serif; font-weight: 700;
+  font-size: clamp(22px, 4vw, 30px);
+  color: #fff; margin-bottom: 8px; letter-spacing: .02em;
+}
+.cta p { color: var(--muted); font-size: 15px; margin-bottom: 22px; }
+.cta a.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Rajdhani', sans-serif; font-weight: 700;
+  font-size: 16px; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff; text-decoration: none;
+  padding: 13px 28px; border-radius: 8px;
+  background: var(--red);
+  box-shadow: 0 4px 20px rgba(232,25,44,0.4);
+  transition: transform .15s, box-shadow .15s;
+}
+.cta a.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(232,25,44,0.55); }
 
-/* Footer */
-footer.site{border-top:1px solid var(--line);padding:20px 0 36px;color:var(--muted);font-size:13px;text-align:center}
-footer.site a{color:var(--blue);text-decoration:none}
+/* FOOTER */
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 24px 0 40px;
+  color: var(--muted); font-size: 13px; text-align: center;
+}
+footer.site a { color: var(--cyan); text-decoration: none; }
 
-${isSample ? ".sample-note{background:#FFF6E5;border:1px solid #F1DCAE;border-radius:8px;padding:10px 14px;font-size:14px;margin-bottom:14px}" : ""}
+${isSample ? ".sample-note{background:#1a1200;border:1px solid #4a3800;border-radius:8px;padding:10px 14px;font-size:13px;color:#f0b429;margin-bottom:16px}" : ""}
 </style>
 </head>
 <body>
 
 <header class="site">
-  <div class="wrap">
-    <span class="glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-    <span class="brand">Pixel Rooms <span>/ Reviews</span></span>
+  <div class="inner">
+    <a href="${esc(business.url)}" class="logo">
+      PIXEL ROOMS <span>/ REVIEWS</span>
+    </a>
+    <a href="${esc(business.url)}" class="header-link" rel="noopener">Visit Site</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>What customers say about ${esc(business.name)}</h1>
-    <div class="score-row">
-      <div class="score">${avg}</div>
+    <h1>What our customers say about <em>Pixel Rooms</em></h1>
+    <div class="score-block">
+      <div class="score-num">${avg}</div>
       <div class="score-right">
         ${googleStars(Math.round(avg), "lg")}
-        <p class="count">${reviews.length} verified Google reviews</p>
+        <p class="score-count">${reviews.length} verified Google reviews</p>
       </div>
     </div>
-    <nav class="sources" aria-label="Review platforms">
-      <a href="${esc(business.googleMapsUrl)}" rel="noopener">See us on Google</a>
-      <a href="${esc(business.url)}" rel="noopener">Visit pixelrooms.com</a>
-    </nav>
   </div>
 </section>
 
 <main class="wrap">
-  ${isSample ? '<div class="sample-note">Sample data — run first sync to load real Google reviews.</div>' : ""}
-  <h2 class="section-label">All reviews</h2>
-  ${reviewCards}
+  ${isSample ? '<div class="sample-note">⚠ Sample data — run first sync to load real Google reviews.</div>' : ""}
+  <div class="cards-grid">
+    ${reviewCards}
+  </div>
   <div class="cta">
-    <h2>Been to Pixel Rooms?</h2>
-    <p>Your review helps other visitors and takes one minute.</p>
-    <a class="btn" href="${esc(business.googleMapsUrl)}" rel="noopener">
+    <h2>Visited Pixel Rooms?</h2>
+    <p>Share your experience — it takes one minute and helps others discover us.</p>
+    <a class="btn" href="${esc(WRITE_REVIEW_URL)}" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/></svg>
-      Write a Google review
+      Write a Google Review
     </a>
   </div>
 </main>
@@ -250,53 +355,21 @@ ${isSample ? ".sample-note{background:#FFF6E5;border:1px solid #F1DCAE;border-ra
 <footer class="site">
   <div class="wrap">
     <p>${esc(business.name)} · ${esc(business.address.streetAddress)}, ${esc(business.address.addressLocality)}, ${esc(business.address.addressRegion)} ${esc(business.address.postalCode)}</p>
-    <p>Google reviews updated daily. <a href="${esc(business.url)}">pixelrooms.com</a></p>
+    <p style="margin-top:6px">Google reviews updated daily · <a href="${esc(business.url)}">pixelrooms.com</a></p>
   </div>
 </footer>
 </body>
 </html>
 `;
 
-// ---------- sitemap / robots / llms.txt ----------
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${SITE}/</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-</urlset>
-`;
+</urlset>`;
 
-const robots = `User-agent: *
-Allow: /
+const robots = `User-agent: *\nAllow: /\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nSitemap: ${SITE}/sitemap.xml`;
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-Sitemap: ${SITE}/sitemap.xml
-`;
-
-const llms = `# ${business.name} Reviews
-
-> ${business.description}
-
-Average customer rating: ${avg} / 5 from ${reviews.length} Google reviews.
-Address: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, US.
-Official website: ${business.url}
-
-## Recent customer reviews
-
-${reviews
-  .slice(0, 25)
-  .map((r) => `- ${r.rating}/5 — "${r.text}" — ${r.author}, ${r.date} (${sourceLabel[r.source] || r.source})`)
-  .join("\n")}
-`;
+const llms = `# ${business.name} Reviews\n\n> ${business.description}\n\nAverage customer rating: ${avg} / 5 from ${reviews.length} Google reviews.\nAddress: ${business.address.streetAddress}, ${business.address.addressLocality}, ${business.address.addressRegion} ${business.address.postalCode}, US.\nOfficial website: ${business.url}\n\n## Recent customer reviews\n\n${reviews.slice(0,25).map(r=>`- ${r.rating}/5 — "${r.text}" — ${r.author}, ${r.date}`).join("\n")}`;
 
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(DIST, { recursive: true });
@@ -304,5 +377,4 @@ fs.writeFileSync(path.join(DIST, "index.html"), html);
 fs.writeFileSync(path.join(DIST, "sitemap.xml"), sitemap);
 fs.writeFileSync(path.join(DIST, "robots.txt"), robots);
 fs.writeFileSync(path.join(DIST, "llms.txt"), llms);
-
-console.log(`Built dist/: ${reviews.length} reviews, average ${avg}.${isSample ? " (sample data)" : ""}`);
+console.log(`Built dist/: ${reviews.length} reviews, avg ${avg}.${isSample?" (sample)":""}`);
