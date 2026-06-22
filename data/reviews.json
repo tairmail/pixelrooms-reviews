@@ -1,12 +1,30 @@
 {
   "meta": {
-    "lastSync": "2026-06-19T15:54:59.221Z",
-    "totalReviews": 53,
+    "lastSync": "2026-06-22T17:22:50.022Z",
+    "totalReviews": 55,
     "averageRating": 5,
     "upstreamAverage": 5,
-    "upstreamTotal": 144
+    "upstreamTotal": 146
   },
   "reviews": [
+    {
+      "id": "google:AbFvOql6IyP8lN5RZPJHYhSBB3-4sZGz25RUbVApanxbub6vVl3N7sm9vT1U8g1LP-oM4BZLh7f0",
+      "source": "google",
+      "author": "Mariana Huerta",
+      "rating": 5,
+      "text": "My family came to Los Angeles for the weekend, and one of the highlights of our trip was visiting the Pixel Room. We had a fantastic experience from start to finish. Rickie was amazing from the very beginning—friendly, welcoming, and incredibly helpful throughout our visit.\nHe made sure everything ran smoothly and went out of his way to make us feel comfortable and taken care of. His positive attitude and great customer service really stood out and made our experience even more enjoyable.",
+      "date": "2026-06-21",
+      "reviewId": "AbFvOql6IyP8lN5RZPJHYhSBB3-4sZGz25RUbVApanxbub6vVl3N7sm9vT1U8g1LP-oM4BZLh7f0"
+    },
+    {
+      "id": "google:AbFvOqmRnGk4PnJYPsx0iphcKAnoFqxbdFw6ALYJ7GWjwW0V0rhFOOcDjKCOGKaT7G4V9AN-upzYZg",
+      "source": "google",
+      "author": "Gabriel Martinez",
+      "rating": 5,
+      "text": "I'd highly recommend the Pixel Room to anyone visiting LA! My family and I stopped by during a weekend trip, and we had an awesome experience. From the moment we arrived, Rickie made us feel welcome and taken care of. He was friendly, professional, and genuinely seemed to care about making sure everyone had a great time.\nThe entire experience was fun, smooth, and memorable, and a big part of that was thanks to Rickie's outstanding customer service. He set the tone from the beginning and made sure everything exceeded our expectations. Thanks again, Rickie, for helping make our family trip even more special. We can't wait to come back!",
+      "date": "2026-06-21",
+      "reviewId": "AbFvOqmRnGk4PnJYPsx0iphcKAnoFqxbdFw6ALYJ7GWjwW0V0rhFOOcDjKCOGKaT7G4V9AN-upzYZg"
+    },
     {
       "id": "google:AbFvOqmcky_VOUUkzG26VPdDienUhSaYdDtS7b1DuAO97gWb5CG1s6LkdLk7N4upUoOk9Lq35mcurQ",
       "source": "google",
