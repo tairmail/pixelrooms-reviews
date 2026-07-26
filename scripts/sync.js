@@ -1,126 +1,172 @@
 #!/usr/bin/env node
 /**
- * sync.js — pulls Google reviews and stores them locally in data/reviews.json.
+ * sync.js — pulls ALL Google reviews via Google Business Profile API directly.
+ * Uses OAuth2 refresh token — no limits, no third-party service.
  *
- * Source: Featurable API (free wrapper around the Google Business Profile API,
- * returns the full review set for a business you own — not just the 5 reviews
- * the Places API exposes).
- *
- * Setup: create a free widget at https://featurable.com, connect the
- * Pixel Rooms Google Business Profile, copy the widget ID, and set it as
- * the FEATURABLE_WIDGET_ID environment variable (GitHub Actions secret).
- *
- * Deduplication: reviews are keyed by a stable ID (Google review ID when
- * available, otherwise a hash of author + date + text). Existing reviews are
- * never deleted — if a review disappears upstream it stays in the local store,
- * which is what you want for SEO permanence.
+ * Required GitHub Secrets:
+ *   GOOGLE_CLIENT_ID
+ *   GOOGLE_CLIENT_SECRET
+ *   GOOGLE_REFRESH_TOKEN
  */
 
 const fs = require("fs");
 const path = require("path");
-const crypto = require("crypto");
+const https = require("https");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 const STORE = path.join(DATA_DIR, "reviews.json");
 
-const WIDGET_ID = process.env.FEATURABLE_WIDGET_ID;
-if (!WIDGET_ID) {
-  console.error("FEATURABLE_WIDGET_ID is not set. Aborting sync.");
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN;
+
+if (!CLIENT_ID || !CLIENT_SECRET || !REFRESH_TOKEN) {
+  console.error("Missing GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, or GOOGLE_REFRESH_TOKEN");
   process.exit(1);
+}
+
+function httpsPost(url, data) {
+  return new Promise((resolve, reject) => {
+    const body = new URLSearchParams(data).toString();
+    const u = new URL(url);
+    const req = https.request({
+      hostname: u.hostname, path: u.pathname, method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded", "Content-Length": Buffer.byteLength(body) }
+    }, res => {
+      let d = ""; res.on("data", c => d += c); res.on("end", () => resolve(JSON.parse(d)));
+    });
+    req.on("error", reject); req.write(body); req.end();
+  });
+}
+
+function httpsGet(url, token) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const req = https.request({
+      hostname: u.hostname, path: u.pathname + (u.search || ""), method: "GET",
+      headers: { "Authorization": `Bearer ${token}`, "Accept": "application/json" }
+    }, res => {
+      let d = ""; res.on("data", c => d += c); res.on("end", () => resolve(JSON.parse(d)));
+    });
+    req.on("error", reject); req.end();
+  });
+}
+
+async function getAccessToken() {
+  const result = await httpsPost("https://oauth2.googleapis.com/token", {
+    client_id: CLIENT_ID, client_secret: CLIENT_SECRET,
+    refresh_token: REFRESH_TOKEN, grant_type: "refresh_token"
+  });
+  if (!result.access_token) {
+    console.error("Failed to get access token:", JSON.stringify(result));
+    process.exit(1);
+  }
+  return result.access_token;
+}
+
+async function getAccountId(token) {
+  const data = await httpsGet("https://mybusinessaccountmanagement.googleapis.com/v1/accounts", token);
+  if (!data.accounts || data.accounts.length === 0) {
+    console.error("No accounts found:", JSON.stringify(data));
+    process.exit(1);
+  }
+  return data.accounts[0].name;
+}
+
+async function getLocationId(token, accountId) {
+  const data = await httpsGet(
+    `https://mybusinessbusinessinformation.googleapis.com/v1/${accountId}/locations?readMask=name,title`,
+    token
+  );
+  if (!data.locations || data.locations.length === 0) {
+    console.error("No locations found:", JSON.stringify(data));
+    process.exit(1);
+  }
+  const loc = data.locations.find(l => (l.title || "").toLowerCase().includes("pixel")) || data.locations[0];
+  console.log(`Using location: ${loc.title} (${loc.name})`);
+  return loc.name;
+}
+
+async function getAllReviews(token, locationId) {
+  const reviews = [];
+  let pageToken = null;
+  do {
+    const url = `https://mybusiness.googleapis.com/v4/${locationId}/reviews?pageSize=50${pageToken ? `&pageToken=${pageToken}` : ""}`;
+    const data = await httpsGet(url, token);
+    if (data.error) {
+      console.error("Reviews API error:", JSON.stringify(data.error));
+      process.exit(1);
+    }
+    for (const r of data.reviews || []) reviews.push(r);
+    pageToken = data.nextPageToken || null;
+    console.log(`Fetched ${reviews.length} reviews so far...`);
+  } while (pageToken);
+  return reviews;
 }
 
 const STAR_MAP = { ONE: 1, TWO: 2, THREE: 3, FOUR: 4, FIVE: 5 };
 
-function stableId(review) {
-  if (review.reviewId) return `google:${review.reviewId}`;
-  const basis = `${review.author}|${review.date}|${(review.text || "").slice(0, 80)}`;
-  return "google:" + crypto.createHash("sha1").update(basis).digest("hex").slice(0, 16);
-}
-
 function normalize(raw) {
-  const rating =
-    typeof raw.starRating === "number"
-      ? raw.starRating
-      : STAR_MAP[String(raw.starRating).toUpperCase()] || null;
-
+  const rating = STAR_MAP[String(raw.starRating).toUpperCase()] || null;
+  const reviewId = raw.reviewId || raw.name;
   return {
-    id: null, // filled below
+    id: `google:${reviewId}`,
     source: "google",
-    author: (raw.reviewer && raw.reviewer.displayName) || raw.author || "Google user",
+    author: (raw.reviewer && raw.reviewer.displayName) || "Google user",
     rating,
-    text: (raw.comment || raw.text || "").trim(),
-    date: (raw.createTime || raw.updateTime || raw.date || "").slice(0, 10),
-    reviewId: raw.reviewId || raw.id || null,
+    text: (raw.comment || "").trim(),
+    date: (raw.createTime || raw.updateTime || "").slice(0, 10),
+    reviewId,
   };
 }
 
 async function main() {
-  const url = `https://featurable.com/api/v1/widgets/${WIDGET_ID}`;
-  console.log("Fetching reviews…");
-  const res = await fetch(url, { headers: { accept: "application/json" } });
-  if (!res.ok) {
-    console.error(`Featurable API returned ${res.status}. Aborting without changes.`);
-    process.exit(1);
-  }
-  const payload = await res.json();
-  const incomingRaw = payload.reviews || [];
-  console.log(`Fetched ${incomingRaw.length} reviews from Google.`);
+  console.log("Getting access token...");
+  const token = await getAccessToken();
 
-  // Load existing store
+  console.log("Getting account...");
+  const accountId = await getAccountId(token);
+  console.log(`Account: ${accountId}`);
+
+  console.log("Getting location...");
+  const locationId = await getLocationId(token, accountId);
+
+  console.log("Fetching all reviews...");
+  const incomingRaw = await getAllReviews(token, locationId);
+  console.log(`Total fetched: ${incomingRaw.length} reviews`);
+
   let store = { meta: {}, reviews: [] };
   if (fs.existsSync(STORE)) {
-    try {
-      store = JSON.parse(fs.readFileSync(STORE, "utf8"));
-    } catch {
-      console.warn("Existing reviews.json unreadable — starting fresh.");
-    }
+    try { store = JSON.parse(fs.readFileSync(STORE, "utf8")); } catch {}
   }
 
   const byId = new Map();
   for (const r of store.reviews || []) byId.set(r.id, r);
 
-  let added = 0;
-  let updated = 0;
+  let added = 0, updated = 0;
   for (const raw of incomingRaw) {
     const review = normalize(raw);
-    if (!review.rating) continue; // skip malformed entries
-    review.id = stableId(review);
+    if (!review.rating) continue;
     const existing = byId.get(review.id);
-    if (!existing) {
-      byId.set(review.id, review);
-      added++;
-    } else if (existing.text !== review.text || existing.rating !== review.rating) {
-      byId.set(review.id, { ...existing, ...review }); // review was edited upstream
-      updated++;
+    if (!existing) { byId.set(review.id, review); added++; }
+    else if (existing.text !== review.text || existing.rating !== review.rating) {
+      byId.set(review.id, { ...existing, ...review }); updated++;
     }
   }
 
   const reviews = [...byId.values()].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-
-  const rated = reviews.filter((r) => r.rating);
-  const avg =
-    rated.length > 0
-      ? Math.round((rated.reduce((s, r) => s + r.rating, 0) / rated.length) * 10) / 10
-      : null;
+  const rated = reviews.filter(r => r.rating);
+  const avg = rated.length > 0
+    ? Math.round((rated.reduce((s, r) => s + r.rating, 0) / rated.length) * 10) / 10
+    : null;
 
   store = {
-    meta: {
-      lastSync: new Date().toISOString(),
-      totalReviews: reviews.length,
-      averageRating: avg,
-      upstreamAverage: payload.averageRating || null,
-      upstreamTotal: payload.totalReviewCount || null,
-    },
-    reviews,
+    meta: { lastSync: new Date().toISOString(), totalReviews: reviews.length, averageRating: avg },
+    reviews
   };
 
   fs.writeFileSync(STORE, JSON.stringify(store, null, 2) + "\n");
-  console.log(
-    `Done. ${added} new, ${updated} updated, ${reviews.length} total. Average ${avg}.`
-  );
+  console.log(`Done. ${added} new, ${updated} updated, ${reviews.length} total. Average: ${avg}`);
 }
 
-main().catch((err) => {
-  console.error("Sync failed:", err.message);
-  process.exit(1);
-});
+main().catch(err => { console.error("Sync failed:", err.message); process.exit(1); });
