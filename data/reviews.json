@@ -1,10 +1,8 @@
 {
   "meta": {
-    "lastSync": "2026-07-20T15:13:26.883Z",
-    "totalReviews": 55,
-    "averageRating": 5,
-    "upstreamAverage": 5,
-    "upstreamTotal": 146
+    "lastSync": "2026-07-27T01:25:46.781Z",
+    "totalReviews": 152,
+    "averageRating": 5
   },
   "reviews": [
     {
@@ -24,6 +22,15 @@
       "text": "I'd highly recommend the Pixel Room to anyone visiting LA! My family and I stopped by during a weekend trip, and we had an awesome experience. From the moment we arrived, Rickie made us feel welcome and taken care of. He was friendly, professional, and genuinely seemed to care about making sure everyone had a great time.\nThe entire experience was fun, smooth, and memorable, and a big part of that was thanks to Rickie's outstanding customer service. He set the tone from the beginning and made sure everything exceeded our expectations. Thanks again, Rickie, for helping make our family trip even more special. We can't wait to come back!",
       "date": "2026-06-21",
       "reviewId": "AbFvOqmRnGk4PnJYPsx0iphcKAnoFqxbdFw6ALYJ7GWjwW0V0rhFOOcDjKCOGKaT7G4V9AN-upzYZg"
+    },
+    {
+      "id": "google:AbFvOqnORkxwnGu7AkOjb3tiI6pQmOJ-w8UPO4VDEEvVSf7tzvpodNUOmZr3oq6g4cV4qnY8O31vjw",
+      "source": "google",
+      "author": "Razmik hakobyan",
+      "rating": 5,
+      "text": "",
+      "date": "2026-06-07",
+      "reviewId": "AbFvOqnORkxwnGu7AkOjb3tiI6pQmOJ-w8UPO4VDEEvVSf7tzvpodNUOmZr3oq6g4cV4qnY8O31vjw"
     },
     {
       "id": "google:AbFvOqmcky_VOUUkzG26VPdDienUhSaYdDtS7b1DuAO97gWb5CG1s6LkdLk7N4upUoOk9Lq35mcurQ",
@@ -350,6 +357,15 @@
       "reviewId": "AbFvOqmZC9rjQmO9JEF4_Oj1WnBAjFW6lw8MKsjO5hTwRf_ffjPm2t81qriOUBSq_kZd_h1q1SHXKQ"
     },
     {
+      "id": "google:AbFvOqlMpftRK5Hn2r8QLq9dkclPVu5ea9LsKbVm7jQQddRuDSet5LuarBk0r0PPCLK880-uUHlJLQ",
+      "source": "google",
+      "author": "Leann Seto",
+      "rating": 5,
+      "text": "",
+      "date": "2026-02-15",
+      "reviewId": "AbFvOqlMpftRK5Hn2r8QLq9dkclPVu5ea9LsKbVm7jQQddRuDSet5LuarBk0r0PPCLK880-uUHlJLQ"
+    },
+    {
       "id": "google:AbFvOqmIp4bPbSmfdAQKoTgN_lf3BoDHpZEGw19Ss0eSIiUvxTQlD1oIcA3y9G68aCIz_tIlUNfKvg",
       "source": "google",
       "author": "Shawna Allen",
@@ -485,6 +501,15 @@
       "reviewId": "AbFvOqmKOmc1lMARtYvQHxb3NOAUV3SBGlsPQpGHMIOE4EV9YDvnP-MhKrOUiaKrAsbxlxqSjKrR"
     },
     {
+      "id": "google:AbFvOqntIQJNdQJ1cK2DHURbgBRZYLNvxJe08pcric0DJhQs8M58aLdu3dD_4-QkNArFWkLMP_pt-A",
+      "source": "google",
+      "author": "Bobbie Ferguson",
+      "rating": 5,
+      "text": "",
+      "date": "2026-01-01",
+      "reviewId": "AbFvOqntIQJNdQJ1cK2DHURbgBRZYLNvxJe08pcric0DJhQs8M58aLdu3dD_4-QkNArFWkLMP_pt-A"
+    },
+    {
       "id": "google:AbFvOqkIBMPaEKw0WeTuS0wDJM2ZBgTCvEJwtinRYli60YPhJFcQqvcJXYs7iVnuJr_ARmt4NpnD1A",
       "source": "google",
       "author": "Александр Боровков",
@@ -501,6 +526,852 @@
       "text": "Tommy made our experience extremely fun. All 3 of the rooms kept us engaged and were super fun. 10/10 experience would go again.",
       "date": "2025-12-31",
       "reviewId": "AbFvOqnqhOG_EzVya5ALO36KqhI5s3lQXcYPglE1EsQZTdHPZaU7uhZ6dgncdIMcuJ2FdUJdFClLAA"
+    },
+    {
+      "id": "google:AbFvOqnQq8qLToR0Df1FULkApcGVai6i5VMeuJ7FlaV32Muha85RvIemi8NEiTv5lvZFrn8ZEsvZjA",
+      "source": "google",
+      "author": "kyle yun",
+      "rating": 5,
+      "text": "It was a lot of fun and Tommy did a great job showing us how to play",
+      "date": "2025-12-31",
+      "reviewId": "AbFvOqnQq8qLToR0Df1FULkApcGVai6i5VMeuJ7FlaV32Muha85RvIemi8NEiTv5lvZFrn8ZEsvZjA"
+    },
+    {
+      "id": "google:AbFvOqkyqUQr7BFzJWFpxo1pj90Q2C6o3H-fokPRWuTy5nbTDdb7ixzTLrjQ389N5yFRMUAe3sgVKw",
+      "source": "google",
+      "author": "samuel jared",
+      "rating": 5,
+      "text": "Tom was a fantastic guide and the rooms were so cool. It felt like I was in a spy video game",
+      "date": "2025-12-24",
+      "reviewId": "AbFvOqkyqUQr7BFzJWFpxo1pj90Q2C6o3H-fokPRWuTy5nbTDdb7ixzTLrjQ389N5yFRMUAe3sgVKw"
+    },
+    {
+      "id": "google:AbFvOqlc4TeG_563RSlFjzsvV6vlOmXZ29AvxVwXtRmFWOTFCnhm49eyL0JhulVAQ-BrH0jOuvqRog",
+      "source": "google",
+      "author": "Jane Neuman",
+      "rating": 5,
+      "text": "We had a great time! Tommy made the experience great!",
+      "date": "2025-12-24",
+      "reviewId": "AbFvOqlc4TeG_563RSlFjzsvV6vlOmXZ29AvxVwXtRmFWOTFCnhm49eyL0JhulVAQ-BrH0jOuvqRog"
+    },
+    {
+      "id": "google:AbFvOql6IvM95HEbeczhMZmcFP7qP6-SCAXX4aayT7mKGGkM5kpU1Hr6ETdjUExb3DGTbX6rwFSj",
+      "source": "google",
+      "author": "Allison Neuman",
+      "rating": 5,
+      "text": "Had a super fun time, and Tommy was great! Would definitely come again😁",
+      "date": "2025-12-24",
+      "reviewId": "AbFvOql6IvM95HEbeczhMZmcFP7qP6-SCAXX4aayT7mKGGkM5kpU1Hr6ETdjUExb3DGTbX6rwFSj"
+    },
+    {
+      "id": "google:AbFvOqmv9kU1F5VOsTrfsGtmYGxLT8b7dcwJmtqBu6Gr9tQEjmJkRvtUYOg_9dChto8QxK7OmZEifQ",
+      "source": "google",
+      "author": "Milo Jared",
+      "rating": 5,
+      "text": "Super cool interactive games, Tommy was amazing!!!!",
+      "date": "2025-12-24",
+      "reviewId": "AbFvOqmv9kU1F5VOsTrfsGtmYGxLT8b7dcwJmtqBu6Gr9tQEjmJkRvtUYOg_9dChto8QxK7OmZEifQ"
+    },
+    {
+      "id": "google:AbFvOqkYmIa4tRzOoqjtJ6MM0IbuyKD2SGv5NMv5llMGcyXhbsZA1LcFlpc8gD0N_9xntTuadopQGg",
+      "source": "google",
+      "author": "Christopher Stanley",
+      "rating": 5,
+      "text": "Had an amazing time with my cousins! Our guide Tommy was helpful, informative and funny and helped to make the experience unforgettable",
+      "date": "2025-12-24",
+      "reviewId": "AbFvOqkYmIa4tRzOoqjtJ6MM0IbuyKD2SGv5NMv5llMGcyXhbsZA1LcFlpc8gD0N_9xntTuadopQGg"
+    },
+    {
+      "id": "google:AbFvOqlS0TT0NQpGvTieqzmP9CTLqyfWmZubuwvIP8Yj7hUhACg5JaQqtrE04xe2PQlMuYdVh-rw",
+      "source": "google",
+      "author": "Elaine Ellis",
+      "rating": 5,
+      "text": "That was soo much fun and time went by so fast! The rooms are so cool! This is a great activity for someone that likes to be active! I get motion sick in VR rooms so my husband found this for us to do and it was perfect! We will definitely do this again! You can really learn about someone’s communication style through this because you have to work together, kind of awesome for a date lol. The pixel room was our favorite! We got a really good workout and got our sweat on, it was a great! Shoutout to Naomi and Tommy for the clear instructions and for cheering us on!",
+      "date": "2025-12-21",
+      "reviewId": "AbFvOqlS0TT0NQpGvTieqzmP9CTLqyfWmZubuwvIP8Yj7hUhACg5JaQqtrE04xe2PQlMuYdVh-rw"
+    },
+    {
+      "id": "google:AbFvOqkA6rSXntdZcpeBr-eULvFgp5N5g8ai30oASUh6MtROIfMfUXDA4DyJauHcnJcyI0sTqyyvaA",
+      "source": "google",
+      "author": "Kyle Ellis",
+      "rating": 5,
+      "text": "Very fun experience that gets the body and brain working! Teamwork helped a lot to complete the challenges. Tommy and Naomi were great at explaining everything.",
+      "date": "2025-12-21",
+      "reviewId": "AbFvOqkA6rSXntdZcpeBr-eULvFgp5N5g8ai30oASUh6MtROIfMfUXDA4DyJauHcnJcyI0sTqyyvaA"
+    },
+    {
+      "id": "google:AbFvOqka_e0UgKjOIHLpjNn8D7onJqVmRV4VLisKANSHygATI_MGrvqEOPU7G6F9HzHq2jcoD39YsQ",
+      "source": "google",
+      "author": "Elijah Soberano",
+      "rating": 5,
+      "text": "Very fun and the host was very energetic and to the point regarding how to play these games. He even allowed us to start early!",
+      "date": "2025-12-19",
+      "reviewId": "AbFvOqka_e0UgKjOIHLpjNn8D7onJqVmRV4VLisKANSHygATI_MGrvqEOPU7G6F9HzHq2jcoD39YsQ"
+    },
+    {
+      "id": "google:AbFvOqljxExcAetntHSHv1w3_l7Yq-a0y6Q8lbQ6cRtddEb1rkz49QaMtkSON4XxmcRDfS2FKvR99g",
+      "source": "google",
+      "author": "Allan de Leon",
+      "rating": 5,
+      "text": "Fun, physical, and great for team building! Tommy was great!",
+      "date": "2025-12-19",
+      "reviewId": "AbFvOqljxExcAetntHSHv1w3_l7Yq-a0y6Q8lbQ6cRtddEb1rkz49QaMtkSON4XxmcRDfS2FKvR99g"
+    },
+    {
+      "id": "google:AbFvOqlRPKmGoaG0rUvUA0oZmbxWGWLf1mXW_ptaDUVrInuD3xI6eXTakHwGYvdIhuA7TsHpxO0KyA",
+      "source": "google",
+      "author": "Brett Glatman",
+      "rating": 5,
+      "text": "Such a fun time! Tommy was an awesome guide. We had a birthday. Will be back and back back!",
+      "date": "2025-12-19",
+      "reviewId": "AbFvOqlRPKmGoaG0rUvUA0oZmbxWGWLf1mXW_ptaDUVrInuD3xI6eXTakHwGYvdIhuA7TsHpxO0KyA"
+    },
+    {
+      "id": "google:AbFvOqmfoluwi_Y8TtQ8GRY7LS8eauq6HbuV0ALXFZN5GuSCy2YhBzDqW_wUujBrOqABNA8Rtt_z",
+      "source": "google",
+      "author": "B Shamuilian",
+      "rating": 5,
+      "text": "So much fun everyone should try it!!",
+      "date": "2025-12-18",
+      "reviewId": "AbFvOqmfoluwi_Y8TtQ8GRY7LS8eauq6HbuV0ALXFZN5GuSCy2YhBzDqW_wUujBrOqABNA8Rtt_z"
+    },
+    {
+      "id": "google:AbFvOqmOnRwfa-mXJ3j3qR5mGAnuCDOqbeG8pVdsFrgjuqdY0PzffYwvpowkYEfOTGls1r1CY4Y8tw",
+      "source": "google",
+      "author": "Joshua Jones",
+      "rating": 5,
+      "text": "This place was terrific and Tommy was a great host. If you are escape room people looking for something very fun, and decently physically demanding, I can't recommend this place enough. We will definitely come back!",
+      "date": "2025-12-14",
+      "reviewId": "AbFvOqmOnRwfa-mXJ3j3qR5mGAnuCDOqbeG8pVdsFrgjuqdY0PzffYwvpowkYEfOTGls1r1CY4Y8tw"
+    },
+    {
+      "id": "google:AbFvOqmz1ZL8IvR2wND6rHbQb-ERNKOHJrFAJ-gmeEQuRtmlQWOzQHT38O2S9st2WNVj11z3dA75",
+      "source": "google",
+      "author": "W.",
+      "rating": 5,
+      "text": "",
+      "date": "2025-12-12",
+      "reviewId": "AbFvOqmz1ZL8IvR2wND6rHbQb-ERNKOHJrFAJ-gmeEQuRtmlQWOzQHT38O2S9st2WNVj11z3dA75"
+    },
+    {
+      "id": "google:AbFvOql98ZAYEpXPWSn-6fvWKgTw4jc9DlLx2j6l75K--cXT5alAGplmsIBnSwKiY-zySrTWBIAR4Q",
+      "source": "google",
+      "author": "Semën Mityakin",
+      "rating": 5,
+      "text": "My wife and I stopped by Pixel Rooms today and honestly had such a great time. We didn’t really know what to expect, but the games were super fun and way more interactive than any regular arcade. We were running around, laughing, and just fully enjoying ourselves the whole time.\n\nThe place is clean, the vibe is cool, and the staff was really friendly.\nDefinitely a fun spot to check out in LA! We’ll be coming back for sure :)",
+      "date": "2025-12-09",
+      "reviewId": "AbFvOql98ZAYEpXPWSn-6fvWKgTw4jc9DlLx2j6l75K--cXT5alAGplmsIBnSwKiY-zySrTWBIAR4Q"
+    },
+    {
+      "id": "google:AbFvOqlEDsjvYk5dI0KDzgYv2Ivdb2mkg-5NxbHSetXxpxXekpbFQ3DO0VyRtSY585UuKFv6bTif",
+      "source": "google",
+      "author": "Kristin Smith",
+      "rating": 5,
+      "text": "We had the best time! What a great experience ♥️♥️♥️",
+      "date": "2025-11-30",
+      "reviewId": "AbFvOqlEDsjvYk5dI0KDzgYv2Ivdb2mkg-5NxbHSetXxpxXekpbFQ3DO0VyRtSY585UuKFv6bTif"
+    },
+    {
+      "id": "google:AbFvOqkprvTH43oQKDbZQGwvVFN7VoEv-qdSq0ehDuZc-wu_lTKFGebFAXMUCxnHBxGH7SymPuROfw",
+      "source": "google",
+      "author": "Liam Higgins",
+      "rating": 5,
+      "text": "Bring a big group, it was a lot of fun! Get ready to run around",
+      "date": "2025-11-28",
+      "reviewId": "AbFvOqkprvTH43oQKDbZQGwvVFN7VoEv-qdSq0ehDuZc-wu_lTKFGebFAXMUCxnHBxGH7SymPuROfw"
+    },
+    {
+      "id": "google:AbFvOqmL3iZYNhytZ0knnTl5HtjsdAAFY0nXCG4zbMqrz_ouGLOUPJTsZPu3DEaGThuwk6OE54rz",
+      "source": "google",
+      "author": "Andy Raab",
+      "rating": 5,
+      "text": "Tons of fun, and we were definitely sweating by the end of the session! The game master pushed us to our limits",
+      "date": "2025-11-28",
+      "reviewId": "AbFvOqmL3iZYNhytZ0knnTl5HtjsdAAFY0nXCG4zbMqrz_ouGLOUPJTsZPu3DEaGThuwk6OE54rz"
+    },
+    {
+      "id": "google:AbFvOqlD5CwNpqwXINok7hmy4ugyvF0YiBYuSF8nUYB_deNCT94v8zrq6-ShBvHlxBzUgne9lQ8NTg",
+      "source": "google",
+      "author": "Lauren Haywood",
+      "rating": 5,
+      "text": "Super fun experience, never done anything like this. Customer service was friendly - would recommend!",
+      "date": "2025-11-28",
+      "reviewId": "AbFvOqlD5CwNpqwXINok7hmy4ugyvF0YiBYuSF8nUYB_deNCT94v8zrq6-ShBvHlxBzUgne9lQ8NTg"
+    },
+    {
+      "id": "google:AbFvOqkoOoK4s8g2XSYSvrVEBpAMQnKF3-bICiORSRD9PB5TBq3GzX59RSBcgQjMoIPsbMy4LQ0P",
+      "source": "google",
+      "author": "Connor Eldredge",
+      "rating": 5,
+      "text": "I always have a blast at the pixel rooms! The games are intuitive and fun, and it’s also a great workout! I worked up quite the sweat, haha. Jackson is so helpful and friendly, I will definitely be back!",
+      "date": "2025-11-28",
+      "reviewId": "AbFvOqkoOoK4s8g2XSYSvrVEBpAMQnKF3-bICiORSRD9PB5TBq3GzX59RSBcgQjMoIPsbMy4LQ0P"
+    },
+    {
+      "id": "google:AbFvOqmBeKOC7ZyuFyH2BZcXh6P1F6Ci0tFZ6y0bMkXg14kEG13X0uj_ZKvZDHn29SprNo1EF9ic",
+      "source": "google",
+      "author": "Kaleb Marr",
+      "rating": 5,
+      "text": "A very fun and unique experience! Kind and friendly staff. Would highly recommend!",
+      "date": "2025-11-28",
+      "reviewId": "AbFvOqmBeKOC7ZyuFyH2BZcXh6P1F6Ci0tFZ6y0bMkXg14kEG13X0uj_ZKvZDHn29SprNo1EF9ic"
+    },
+    {
+      "id": "google:AbFvOqlWQS_N3Em-smvDdD3SSJnYrpvhDX594W8Y92vbBYR8iZyzN_yc75tHtvGXvo4X9d4YBireFg",
+      "source": "google",
+      "author": "Ben Fang",
+      "rating": 5,
+      "text": "Had lots of fun. Would definitely recommend!",
+      "date": "2025-11-22",
+      "reviewId": "AbFvOqlWQS_N3Em-smvDdD3SSJnYrpvhDX594W8Y92vbBYR8iZyzN_yc75tHtvGXvo4X9d4YBireFg"
+    },
+    {
+      "id": "google:AbFvOqnma7ytiZCC3GWjZgVtmtivz5Ae4y6ZhdP-8rlzAA9C5iHrM2SeLKWp35ucFkdLuUfTFpCr3g",
+      "source": "google",
+      "author": "Isaiah Pagcaliwangan (bbb500)",
+      "rating": 5,
+      "text": "Tommy was such a cool and understanding guy. Despite the heavy rain and traffic that caused us to arrive late, he greeted us with a warm smile and was more than accommodating, allowing us to extend our session a bit longer. His positive attitude and enthusiasm made the experience even more enjoyable. The session was not only fun and interactive but also provided a refreshing little workout that left us feeling energized and satisfied.",
+      "date": "2025-11-21",
+      "reviewId": "AbFvOqnma7ytiZCC3GWjZgVtmtivz5Ae4y6ZhdP-8rlzAA9C5iHrM2SeLKWp35ucFkdLuUfTFpCr3g"
+    },
+    {
+      "id": "google:AbFvOqlVtRF7C2mIPqs8_Kr1o5le3PQ912jOB3XiM6NRAyi5NHANElkNFU-9B7-KJFw2xz1SOrKV0Q",
+      "source": "google",
+      "author": "Ronald Navarro",
+      "rating": 5,
+      "text": "So much fun and a good workout! Ricky and Naomi did an amazing job explaining all the games and creating a fun atmosphere.",
+      "date": "2025-11-16",
+      "reviewId": "AbFvOqlVtRF7C2mIPqs8_Kr1o5le3PQ912jOB3XiM6NRAyi5NHANElkNFU-9B7-KJFw2xz1SOrKV0Q"
+    },
+    {
+      "id": "google:AbFvOqknENqexUEFPILwyUISMDE_65ehPbRWu68DS0WyqByHJxuQeb1g4KOoW4PF8vPN1Fbf5T3p",
+      "source": "google",
+      "author": "Bianca Rogacion",
+      "rating": 5,
+      "text": "",
+      "date": "2025-11-16",
+      "reviewId": "AbFvOqknENqexUEFPILwyUISMDE_65ehPbRWu68DS0WyqByHJxuQeb1g4KOoW4PF8vPN1Fbf5T3p"
+    },
+    {
+      "id": "google:AbFvOqkF14M6E238KfE0d2hm6k5i-ffgP41vR1Y-hf3k5Wg6MdiPl7kpN7UtjoZbOsrpjE6WPEvVnw",
+      "source": "google",
+      "author": "Grace Nix",
+      "rating": 5,
+      "text": "So fun!! Felt like I was 6 years old in the bestest of ways. Went with a group of six and it was a great time - on the larger side but still totally awesome. Come check it out !! Naomi and Tommy did such awesome jobs 😄😄! Thanks so much! Highly recommended.",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqkF14M6E238KfE0d2hm6k5i-ffgP41vR1Y-hf3k5Wg6MdiPl7kpN7UtjoZbOsrpjE6WPEvVnw"
+    },
+    {
+      "id": "google:AbFvOqkxi25aEW3RTvLGJz80Dub2VRWoOWiv_RceUIJYdJBWzRZg-9onsMC5d1Ndl5CTUicLtVy6",
+      "source": "google",
+      "author": "Brandon Whipple",
+      "rating": 5,
+      "text": "i’m so sweaty the floor is lava is no joke, shoutout Tommy for guiding me through the puzzles",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqkxi25aEW3RTvLGJz80Dub2VRWoOWiv_RceUIJYdJBWzRZg-9onsMC5d1Ndl5CTUicLtVy6"
+    },
+    {
+      "id": "google:AbFvOqnB2qoJO2MqDWKQ4fpRmwyvCChFtbbaW0xLLzcYt6v-VX3xscip-hxIJ0RblcRLuRK5KzUTEQ",
+      "source": "google",
+      "author": "Bradley Loui",
+      "rating": 5,
+      "text": "Super fun, saw a bunch of ads on Instagram and it did not disappoint!! The laser room and famed pixel room were  a ton of fun and great for our group of 6. Our host Tommy did a great job prepping and explaining all the rooms to us, he was super informative and fun!",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqnB2qoJO2MqDWKQ4fpRmwyvCChFtbbaW0xLLzcYt6v-VX3xscip-hxIJ0RblcRLuRK5KzUTEQ"
+    },
+    {
+      "id": "google:AbFvOqkmePdcPfDMyGpQlV2-qo1e27q-IeLWuwxMuUeqgwFhouKg213QpcyLtCxLcyzUTW9RiLLV2g",
+      "source": "google",
+      "author": "Naomi Melville",
+      "rating": 5,
+      "text": "My friends and I had a great time at pixel room! The Laser Room was so challenging but super fun!! Tommy was great!",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqkmePdcPfDMyGpQlV2-qo1e27q-IeLWuwxMuUeqgwFhouKg213QpcyLtCxLcyzUTW9RiLLV2g"
+    },
+    {
+      "id": "google:AbFvOqkgue8xPnSkRzl-QlAHWoVk_Glk3OaM4wwvhS0LQ7ILWUQP4-kvvCGbEWhew7BApabcmZKv",
+      "source": "google",
+      "author": "Sebastian Rabassa",
+      "rating": 5,
+      "text": "It’s just as fun as those TikTok’s you’ve seen! Tommy was a great host!!",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqkgue8xPnSkRzl-QlAHWoVk_Glk3OaM4wwvhS0LQ7ILWUQP4-kvvCGbEWhew7BApabcmZKv"
+    },
+    {
+      "id": "google:AbFvOqnknscbzB2_8McsnoSFTMSo3jKIKilefopFqUx4nYeZwLQx3Kkd0fvMDPZV1N-1iKmZmZfn",
+      "source": "google",
+      "author": "Alyssa Heyer",
+      "rating": 5,
+      "text": "Had an absolute blast!! Definitely coming back :)",
+      "date": "2025-11-14",
+      "reviewId": "AbFvOqnknscbzB2_8McsnoSFTMSo3jKIKilefopFqUx4nYeZwLQx3Kkd0fvMDPZV1N-1iKmZmZfn"
+    },
+    {
+      "id": "google:AbFvOqk5-83XPg85zV0pmyCfyCEogJgRIyKof0Lk1UNYxjJ-GMdzApLnpdIbfvnqODM-UJTEzDq7mg",
+      "source": "google",
+      "author": "TheLiveKid",
+      "rating": 5,
+      "text": "Such a fun experience! First of all, Tommy was so cool and nice the whole time, he was great. Second of all, the games there were incredibly fun; laser maze had so many outcomes and took a lot of planning super fast; mini games were a little fun warm up to get ready, and the actual game? SO FUN! I personally chose the floor is lava one, and it was so challenging, but fun at the same time, and I had a great time running all over the place. Overall, great service, awesome games, and would definitely recommend coming here with your friends or/and family if you have some free time and bored! TOMMY WAS THE BESTTTTTT!",
+      "date": "2025-11-13",
+      "reviewId": "AbFvOqk5-83XPg85zV0pmyCfyCEogJgRIyKof0Lk1UNYxjJ-GMdzApLnpdIbfvnqODM-UJTEzDq7mg"
+    },
+    {
+      "id": "google:AbFvOqmXROBIRfJVYKH8XFwzi-37QQzNOfeBqnC0d4YCfpo_M8sUkgAhCxqjbMMdH_j6NFihHOsWGg",
+      "source": "google",
+      "author": "Sophia Pineda",
+      "rating": 5,
+      "text": "So fun! Went with a group of 4 and had a blast. Tommy is who helped us and he was amazing!",
+      "date": "2025-11-13",
+      "reviewId": "AbFvOqmXROBIRfJVYKH8XFwzi-37QQzNOfeBqnC0d4YCfpo_M8sUkgAhCxqjbMMdH_j6NFihHOsWGg"
+    },
+    {
+      "id": "google:AbFvOqm0aXrZJ-vtn8SoYrRvHmPmZbjIU6Tb8rVKPQ39cgHWtlX4D9yT6KnD1jLn6wKvgfox-UZtEA",
+      "source": "google",
+      "author": "Dean Matsumoto",
+      "rating": 5,
+      "text": "Had an awesome time at Pixel Room! The place was super fun and full of cool setups for photos. Tommy was the best — super chill, friendly, and made sure we had everything we needed. He really made the experience easy and fun. Definitely recommend checking it out and asking for Tommy when you go!",
+      "date": "2025-11-13",
+      "reviewId": "AbFvOqm0aXrZJ-vtn8SoYrRvHmPmZbjIU6Tb8rVKPQ39cgHWtlX4D9yT6KnD1jLn6wKvgfox-UZtEA"
+    },
+    {
+      "id": "google:AbFvOqmM7iOXZCfbwEbMzKcVQW-nBy3SQv_Sn-qhy8jmfeRafahgtgdqxW0M7IhTWuHItCjcNU8KpA",
+      "source": "google",
+      "author": "Sophie",
+      "rating": 5,
+      "text": "Tommy was a pixel king 👑 thank you for a great night!!! We came in on a Sunday night and he set up all the games for us, gave us great explanations and overall was very helpful! Would come again",
+      "date": "2025-11-10",
+      "reviewId": "AbFvOqmM7iOXZCfbwEbMzKcVQW-nBy3SQv_Sn-qhy8jmfeRafahgtgdqxW0M7IhTWuHItCjcNU8KpA"
+    },
+    {
+      "id": "google:AbFvOqmB6_SlcoTwlpw7_Sl93Osed0c0SHKYPw8QjD6ppZqjO2xwcuQW8YPtxTkC9ljgMomHzdrvgg",
+      "source": "google",
+      "author": "Zeke Su",
+      "rating": 5,
+      "text": "Very unique experience definetly with a stop",
+      "date": "2025-11-09",
+      "reviewId": "AbFvOqmB6_SlcoTwlpw7_Sl93Osed0c0SHKYPw8QjD6ppZqjO2xwcuQW8YPtxTkC9ljgMomHzdrvgg"
+    },
+    {
+      "id": "google:AbFvOql14O1kKQQWBQqaRfl3Y3wRk_XgIE9FvnE9QE6_1Li6mhQFm15hNGqw9ycYE3Xnfo1ifPcvUQ",
+      "source": "google",
+      "author": "HAlina Niehrah",
+      "rating": 5,
+      "text": "Very fun and great workout. The host made it such a great experience.",
+      "date": "2025-11-03",
+      "reviewId": "AbFvOql14O1kKQQWBQqaRfl3Y3wRk_XgIE9FvnE9QE6_1Li6mhQFm15hNGqw9ycYE3Xnfo1ifPcvUQ"
+    },
+    {
+      "id": "google:AbFvOqkw8vKtkpDJNrumPokDRVjw63pbH_k9aonwHj2SD8HFdBt6heXlvL4tnylhW_miQ-7jmVvIrg",
+      "source": "google",
+      "author": "Nigol Nikolian",
+      "rating": 5,
+      "text": "Great place, awesome games and Ricky is a very good host 👍",
+      "date": "2025-10-28",
+      "reviewId": "AbFvOqkw8vKtkpDJNrumPokDRVjw63pbH_k9aonwHj2SD8HFdBt6heXlvL4tnylhW_miQ-7jmVvIrg"
+    },
+    {
+      "id": "google:AbFvOqkifXGAyu6gmZLUXZ0pWO_P8qJYDh8M49D1fAb-7MlSao38tmMbLUkAgkxO-u8jxiWqB6xj",
+      "source": "google",
+      "author": "Sarah Tang",
+      "rating": 5,
+      "text": "Amazing reception/manager! He was so sweet and explained everything to us so well! We had such a great time! If you wanna get out of the house for an hour and get some exercise or if you and your partner are more active type, 10/10 recommend this place for a fun activity/date.\nThey also said they’re going to have more games soon so I can’t wait to go back!",
+      "date": "2025-10-21",
+      "reviewId": "AbFvOqkifXGAyu6gmZLUXZ0pWO_P8qJYDh8M49D1fAb-7MlSao38tmMbLUkAgkxO-u8jxiWqB6xj"
+    },
+    {
+      "id": "google:AbFvOqmowgx3qh7cunhefUdxURXOLYUpM_T9ZfIng5UuX_E6cgKmma8uvron-8i3J5MmogfKU2UAsg",
+      "source": "google",
+      "author": "Luis Gallegos",
+      "rating": 5,
+      "text": "",
+      "date": "2025-10-12",
+      "reviewId": "AbFvOqmowgx3qh7cunhefUdxURXOLYUpM_T9ZfIng5UuX_E6cgKmma8uvron-8i3J5MmogfKU2UAsg"
+    },
+    {
+      "id": "google:AbFvOqmY_KFcfVL4WrksmVidV3giqmboNBk0sWFDduUzRxne4ca_5hc3723k9SCpJiBcdZIxo_A1",
+      "source": "google",
+      "author": "Seongbin Ju Vargas",
+      "rating": 5,
+      "text": "Super fun! Did not expect the excitement and all the sweat! Definitely recommend!",
+      "date": "2025-10-05",
+      "reviewId": "AbFvOqmY_KFcfVL4WrksmVidV3giqmboNBk0sWFDduUzRxne4ca_5hc3723k9SCpJiBcdZIxo_A1"
+    },
+    {
+      "id": "google:AbFvOqnJiufc_0sh6Hrz-8ap7A_tMyPr6bq0KpFLc0DMvXr1WFjuorn8GC_wAaNE8x9HvrFiiLi-hA",
+      "source": "google",
+      "author": "Matt VanZoeren",
+      "rating": 5,
+      "text": "Our party of four had an absolute blast here. The rooms & games started out fun, and got chaotic and hectic by the end. We had fun (and got a great cardio workout too!) The host, Ricky, was such a kind and knowledgeable person who made an already fun experience even better. Highly recommended to anyone in the area.",
+      "date": "2025-09-19",
+      "reviewId": "AbFvOqnJiufc_0sh6Hrz-8ap7A_tMyPr6bq0KpFLc0DMvXr1WFjuorn8GC_wAaNE8x9HvrFiiLi-hA"
+    },
+    {
+      "id": "google:AbFvOqn7kDEt_wU6faqGevbdAduLcCcpEbhTZ7-YMQuep5VpTs8L9MTNNwOB7fImiMvhYftwmD8-",
+      "source": "google",
+      "author": "Renat Yalakov",
+      "rating": 5,
+      "text": "",
+      "date": "2025-09-16",
+      "reviewId": "AbFvOqn7kDEt_wU6faqGevbdAduLcCcpEbhTZ7-YMQuep5VpTs8L9MTNNwOB7fImiMvhYftwmD8-"
+    },
+    {
+      "id": "google:AbFvOqngS7KZ1tvJ93Lvzm6Ai5TXw-800gv4Fh69qiZTLKAXOzHEIqnArqTGIDICGjvQX405Yo6DPw",
+      "source": "google",
+      "author": "Tyler Pennebaker",
+      "rating": 5,
+      "text": "",
+      "date": "2025-09-13",
+      "reviewId": "AbFvOqngS7KZ1tvJ93Lvzm6Ai5TXw-800gv4Fh69qiZTLKAXOzHEIqnArqTGIDICGjvQX405Yo6DPw"
+    },
+    {
+      "id": "google:AbFvOqlCBWJGpFSlXzAROJj1iZFp-hppovW--BaBM6BSqoSP5SyHyfnmjcqnMMLB26-HV_vRsOeMpQ",
+      "source": "google",
+      "author": "Alexa Sorensen",
+      "rating": 5,
+      "text": "1000/10 experience! So much fun! We went for date night and we had a blast — all the games were so much fun, but the laser room was by far the most fun! Ricky was absolutely the best and had the most amazing energy! He was so informative and made everything so easy to understand. He also gave us a little extra time at the end to keep playing which made our experience that much more memorable. We will absolutely be coming back ASAP! Plz open more locations (on the West side!) so we can be regulars :) thanks so much!!!",
+      "date": "2025-09-06",
+      "reviewId": "AbFvOqlCBWJGpFSlXzAROJj1iZFp-hppovW--BaBM6BSqoSP5SyHyfnmjcqnMMLB26-HV_vRsOeMpQ"
+    },
+    {
+      "id": "google:AbFvOqnrIXEbIV8PUN06sCe6j-J1shJ2N5L1mO0PUWhJtQ_Zv2ljvwf1PuXNA4GQFADMkPGirIAt0Q",
+      "source": "google",
+      "author": "Matthew Klein",
+      "rating": 5,
+      "text": "What fun! This was such a unique experience, presented in a very accessible way. Great for team building or laughing with your friends and family. We had such a good time and I can't recommend it enough!",
+      "date": "2025-09-06",
+      "reviewId": "AbFvOqnrIXEbIV8PUN06sCe6j-J1shJ2N5L1mO0PUWhJtQ_Zv2ljvwf1PuXNA4GQFADMkPGirIAt0Q"
+    },
+    {
+      "id": "google:AbFvOqlCfRgzZg3AoDdK6Ux7zbJ0QyiZiBIQ5pikBAONHYWx2UfUh9KHXVGQhALQKuxvSdNrglUYRg",
+      "source": "google",
+      "author": "Gen Tran",
+      "rating": 5,
+      "text": "",
+      "date": "2025-08-17",
+      "reviewId": "AbFvOqlCfRgzZg3AoDdK6Ux7zbJ0QyiZiBIQ5pikBAONHYWx2UfUh9KHXVGQhALQKuxvSdNrglUYRg"
+    },
+    {
+      "id": "google:AbFvOqkkhhyWJrpbXC0cnkvGUYVrmDgiAEcgCGs9Gyto8tr_bUko-QFg5t9AgcVtj7fBRqBzH2N6-A",
+      "source": "google",
+      "author": "Steph",
+      "rating": 5,
+      "text": "",
+      "date": "2025-08-17",
+      "reviewId": "AbFvOqkkhhyWJrpbXC0cnkvGUYVrmDgiAEcgCGs9Gyto8tr_bUko-QFg5t9AgcVtj7fBRqBzH2N6-A"
+    },
+    {
+      "id": "google:AbFvOqklgqEyyVuGlwUh-28GOA9kPMtEG9fNpg0_5XJpd9Cobj8D9I9M-8KSv8MBy5NFIPo_0QPlJQ",
+      "source": "google",
+      "author": "wanDUH",
+      "rating": 5,
+      "text": "What a super fun experience!! Very interactive! And also a good workout! Fun for adults and kids! There's 3 rooms to experience. There's a memory room where you have to remember patterns of the lights. There's a laser maze room..(kinda made me think of that one movie with Catherine zeta Jones moving thru the lasers). And the Floor is lava room.\n\nSooo much fun! You gotta strategically work together as a team to beat the games!\n\nHighly recommended for fun group activities. For kids and adults! Just make sure you dress comfortably cuz you're gonna get sweaty!\n\nYou definitely won't be disappointed! Its great family fun for anybody and everybody!!",
+      "date": "2025-08-12",
+      "reviewId": "AbFvOqklgqEyyVuGlwUh-28GOA9kPMtEG9fNpg0_5XJpd9Cobj8D9I9M-8KSv8MBy5NFIPo_0QPlJQ"
+    },
+    {
+      "id": "google:AbFvOql2IEOF96rdUERPiNW-qPFJFXGNQjXsbclQAVNvqV7ciRp6GBIfjhZziaSUpnAP7nHjnD1buQ",
+      "source": "google",
+      "author": "Jonathan Friedman",
+      "rating": 5,
+      "text": "If you're in L.A. and want a cutting-edge, physically active gaming adventure that’s more than just screentime—Pixel Rooms is a standout. The combination of LED-driven floors, interactive walls, and pulse-pounding laser mazes makes it a memorable go-to for group fun. Just be ready to break a sweat",
+      "date": "2025-07-20",
+      "reviewId": "AbFvOql2IEOF96rdUERPiNW-qPFJFXGNQjXsbclQAVNvqV7ciRp6GBIfjhZziaSUpnAP7nHjnD1buQ"
+    },
+    {
+      "id": "google:AbFvOql-FtfYVDKTnP8unCV0R-XgODKXRcf0ZgFQYL1bindUVADpINuOC0xQClIhDiYYxdsN6JcPYA",
+      "source": "google",
+      "author": "Lily Wang",
+      "rating": 5,
+      "text": "Went here with my friends (6 ppl) great group active. Front desk is very professional and supportive. They have 3 rooms with different games and you can spend 15mins at each then at the end you decide where do you want to spend the last 15mins. We love the 3rd room(floor is lava room) a lot of running jumping and that’s level easy. Only thing is some lamps are not working in the first room but overall great experience.",
+      "date": "2025-07-11",
+      "reviewId": "AbFvOql-FtfYVDKTnP8unCV0R-XgODKXRcf0ZgFQYL1bindUVADpINuOC0xQClIhDiYYxdsN6JcPYA"
+    },
+    {
+      "id": "google:AbFvOqmAq3yJycbWX1Rs8KiAgpRaI1ChHzk6z8TN6LAw86bBIDF9Z30jk9rTJfsTcZLkNlI5eFX9Lg",
+      "source": "google",
+      "author": "Nick Bacon",
+      "rating": 5,
+      "text": "",
+      "date": "2025-07-06",
+      "reviewId": "AbFvOqmAq3yJycbWX1Rs8KiAgpRaI1ChHzk6z8TN6LAw86bBIDF9Z30jk9rTJfsTcZLkNlI5eFX9Lg"
+    },
+    {
+      "id": "google:AbFvOqmY25FErJj22HC2xu6TiojBxY75NAYLLJOPVBfJdEn7bTzFCGqir224YFyzuTP2u4mwIot9",
+      "source": "google",
+      "author": "nolimitdn 2x",
+      "rating": 5,
+      "text": "Amazing interactive rooms",
+      "date": "2025-07-06",
+      "reviewId": "AbFvOqmY25FErJj22HC2xu6TiojBxY75NAYLLJOPVBfJdEn7bTzFCGqir224YFyzuTP2u4mwIot9"
+    },
+    {
+      "id": "google:AbFvOqlPU8279U3XydkoThX2U_YvMXeu9XLF2-K91NM6l-ikyRfPX7FeaxaGCU6hPsgrqLZVb6ic4Q",
+      "source": "google",
+      "author": "Geoff Barb",
+      "rating": 5,
+      "text": "This place was amazing!  My son and I had a fantastic time playing the games! My son's favorite room was the floor is lava and I will have to agree with him!  Such a fun place! A good workout too! Ricky is so nice too!  The only bad part was the parking ticket for parking out front.  They must have been waiting for 3pm to start writing tickets. There was no information about parking on the email and there isn't really a parking lot.  Be careful.",
+      "date": "2025-06-30",
+      "reviewId": "AbFvOqlPU8279U3XydkoThX2U_YvMXeu9XLF2-K91NM6l-ikyRfPX7FeaxaGCU6hPsgrqLZVb6ic4Q"
+    },
+    {
+      "id": "google:AbFvOqm6oIHdF98xJQ9vHW1MslPqM_vGKiHNZAw97j9aORgOFIiLrafA_3zX4uwGJK5vmUWbu2UAcQ",
+      "source": "google",
+      "author": "Zach Choo",
+      "rating": 5,
+      "text": "Really fun! There was a lot packed into the hour and the staff was very nice and helpful.",
+      "date": "2025-06-28",
+      "reviewId": "AbFvOqm6oIHdF98xJQ9vHW1MslPqM_vGKiHNZAw97j9aORgOFIiLrafA_3zX4uwGJK5vmUWbu2UAcQ"
+    },
+    {
+      "id": "google:AbFvOqmpsFH3wQCiJi1BL7bAhYNHEHwDBPOGuzjXNdjlbV8PJQsSX3AOdbWyGmBVnbkjUm9t5TafKw",
+      "source": "google",
+      "author": "Alex Kim",
+      "rating": 5,
+      "text": "Had tons of fun here and got lots of cardio exercise in, and my friends loved it too. Not only that, but Ricky was a top notch guide who presented/explained the games well and made the whole experience much better.",
+      "date": "2025-06-22",
+      "reviewId": "AbFvOqmpsFH3wQCiJi1BL7bAhYNHEHwDBPOGuzjXNdjlbV8PJQsSX3AOdbWyGmBVnbkjUm9t5TafKw"
+    },
+    {
+      "id": "google:AbFvOqnapNwcvnlcMwFfnl-0DqzxJtrvdL-RZlUsHzMUJLZ377y3HxFFqsuACj3W16INYkCh6J25",
+      "source": "google",
+      "author": "Chris Lewis",
+      "rating": 4,
+      "text": "Ricky was a phenomenal host and Laser Maze + Pixel Room was well worth  the time and money. Press and Play wasn’t as intuitive on the first play, but still fun. My only complaint is the AI Voiceover announcements in each room. It felt very gimmicky. With actual VO, it would be a perfect group activity!",
+      "date": "2025-06-21",
+      "reviewId": "AbFvOqnapNwcvnlcMwFfnl-0DqzxJtrvdL-RZlUsHzMUJLZ377y3HxFFqsuACj3W16INYkCh6J25"
+    },
+    {
+      "id": "google:AbFvOql5zUoiPZtsuB6XIt1RPER0QTx-PVgUoFOPVgoPmXzido87fQdwPlVrZzUqPze54wUL8uXITg",
+      "source": "google",
+      "author": "Sam Hyde",
+      "rating": 5,
+      "text": "Ricky was an AMAZING pixel room host, and let us play extra games for a friend’s birthday after our time slot. We’ll definitely be back, rather than go to the gym lol! Also, WEAR WORKOUT CLOTHES AND SNEAKERS.",
+      "date": "2025-06-21",
+      "reviewId": "AbFvOql5zUoiPZtsuB6XIt1RPER0QTx-PVgUoFOPVgoPmXzido87fQdwPlVrZzUqPze54wUL8uXITg"
+    },
+    {
+      "id": "google:AbFvOql_15zGBUeT2vwcbH7MEJE44EjDsdUFkik-lLFNk4Ur447uQS_uR3kfExQwr6UqyqcOfOcGXQ",
+      "source": "google",
+      "author": "Beatrice Roque",
+      "rating": 5,
+      "text": "Super fun! Definitely a fun team work type of activity. Game host was very sweet :)",
+      "date": "2025-06-20",
+      "reviewId": "AbFvOql_15zGBUeT2vwcbH7MEJE44EjDsdUFkik-lLFNk4Ur447uQS_uR3kfExQwr6UqyqcOfOcGXQ"
+    },
+    {
+      "id": "google:AbFvOqkVkEEM3MZOgtOO4zX3c6YnalOLuY3JmV_PDVHyUCX5at1jVcY3p3c-wSvym2J-P-HllRSo2Q",
+      "source": "google",
+      "author": "Dj Guerrero",
+      "rating": 5,
+      "text": "Super awesome place! Bringing my friends for the group experience!!!",
+      "date": "2025-06-20",
+      "reviewId": "AbFvOqkVkEEM3MZOgtOO4zX3c6YnalOLuY3JmV_PDVHyUCX5at1jVcY3p3c-wSvym2J-P-HllRSo2Q"
+    },
+    {
+      "id": "google:AbFvOqnyiqVMB0v8HxFR8SwjXrkT3K4MJeUz1ilVgcRpwMW64CIwInpoMfkTe6GQd1JnDoUOpvKi",
+      "source": "google",
+      "author": "Denise Panaligan",
+      "rating": 5,
+      "text": "If I could give more than 5 stars for this experience, I would. My team and I had such a blast. The description says, \"high energy and interactive experience\" - and it sure was! My heart was pumping and water never tasted so good. Highly recommend coming here and it's replayable as well.\n\nOur group expected to break a sweat but I was still not mentally prepared.The moment we started stepping on tiles and taking on the ever-changing challenges, we were fully locked in game mode. It felt like playing \"The Floor is Lava\" with more lights and music.\n\nRicky, our game master, was INCREDIBLE. As an escape room enthusiast, I've been to many of the offerings that 60Out had to offer. While this is not an escape room, this experience is a noteworthy addition to their offerings. Ricky made sure that we got the most out of our experience and he was so thoughtful from start to finish.\n\nWe had a group of five but you can adjust the difficult of the rooms to fit groups of all shapes and sizes. Don't be afraid of a little friendly competition and make sure to stretch! Can’t wait to go back and beat our Level 3 Gauntlet challenge.",
+      "date": "2025-06-19",
+      "reviewId": "AbFvOqnyiqVMB0v8HxFR8SwjXrkT3K4MJeUz1ilVgcRpwMW64CIwInpoMfkTe6GQd1JnDoUOpvKi"
+    },
+    {
+      "id": "google:AbFvOqm8ltG8krDLvqADLYI2kTzjwoCHxAly2ZRDTEenS6KB724vCxrib0lPqLj980qR-uYQNEoVKA",
+      "source": "google",
+      "author": "Peter Limthongviratn",
+      "rating": 5,
+      "text": "So much fun!!! Highly recommend. The games were challenging and exciting. It'll be your cardio for the day. The staff, Ricky, was very friendly and passionate about their games.",
+      "date": "2025-06-19",
+      "reviewId": "AbFvOqm8ltG8krDLvqADLYI2kTzjwoCHxAly2ZRDTEenS6KB724vCxrib0lPqLj980qR-uYQNEoVKA"
+    },
+    {
+      "id": "google:AbFvOqnVxsKjbX6w2eRKE5YR5PRvUEKEGoxo0qPltVn_AlUJ2VPFju8mZKaUe80fqC8hrvnCfHE6fg",
+      "source": "google",
+      "author": "Victor Huynh",
+      "rating": 5,
+      "text": "THANK YOU RICKY for making this one of the best experiences and helping me fulfill my childhood dreams. So much running, so visually beautiful. We will definitely be back to party!!! We'll see you soon!",
+      "date": "2025-06-19",
+      "reviewId": "AbFvOqnVxsKjbX6w2eRKE5YR5PRvUEKEGoxo0qPltVn_AlUJ2VPFju8mZKaUe80fqC8hrvnCfHE6fg"
+    },
+    {
+      "id": "google:AbFvOqmmh4manvOZZBq_MCWw7ftXdJcJXk6XJH3sRdtxnFe5IiUILUMjngHFzBzWhhW7ooQwYmVn",
+      "source": "google",
+      "author": "Hannah Madeline",
+      "rating": 5,
+      "text": "This was so much fun! We came to do a date night and we deeply enjoyed our experience. Ricky was a great host and made sure we understood the goals of each room and curated our experience perfectly! We will be coming back and bringing friends! If you are looking for a fun thing to on a Friday night I highly recommend.",
+      "date": "2025-06-08",
+      "reviewId": "AbFvOqmmh4manvOZZBq_MCWw7ftXdJcJXk6XJH3sRdtxnFe5IiUILUMjngHFzBzWhhW7ooQwYmVn"
+    },
+    {
+      "id": "google:AbFvOqlavhMhwtIFQ_xo9Vcr3VHBkZ10e_xqQDfMxyLt6Dhyv-cAvjBLGTcwjSkPYEimyw90pZEq",
+      "source": "google",
+      "author": "Bartow Weiss",
+      "rating": 5,
+      "text": "So much fun! The laser game was so hard",
+      "date": "2025-06-08",
+      "reviewId": "AbFvOqlavhMhwtIFQ_xo9Vcr3VHBkZ10e_xqQDfMxyLt6Dhyv-cAvjBLGTcwjSkPYEimyw90pZEq"
+    },
+    {
+      "id": "google:AbFvOql8KrpPPSIkq3yWEcbongZBVUe9uXr43fCmgG8wcnJ8l05TIjztmVl_ZLe4xeuMbBc8JgHanA",
+      "source": "google",
+      "author": "Gerard Tatlonghari",
+      "rating": 5,
+      "text": "It’s like jogging in the morning but more fun!!",
+      "date": "2025-06-07",
+      "reviewId": "AbFvOql8KrpPPSIkq3yWEcbongZBVUe9uXr43fCmgG8wcnJ8l05TIjztmVl_ZLe4xeuMbBc8JgHanA"
+    },
+    {
+      "id": "google:AbFvOqkNdImYVocUt8gU7C9B0q0sDKgOz0NqBjwNtaXtPxYqM6AseLwEYK0zKpDKSvZGJAjPcB-gaQ",
+      "source": "google",
+      "author": "Rachel Christie",
+      "rating": 5,
+      "text": "Had an absolute blast! Ricky was an incredible host, could not enjoy him enough! He was kind, helpful, attentive, and we had a great conversation about the local escape room scene! The games were a great combination of challenging yet attainable, the atmosphere was lovely, and the dedicated parking is a HUGE plus",
+      "date": "2025-05-31",
+      "reviewId": "AbFvOqkNdImYVocUt8gU7C9B0q0sDKgOz0NqBjwNtaXtPxYqM6AseLwEYK0zKpDKSvZGJAjPcB-gaQ"
+    },
+    {
+      "id": "google:AbFvOqloSR9wnffvVMC8yiJV0_ENqA_UF67_Tr_0GvDMMcsKvbDWKXmnEUs-EuoBumOoSky41o8u",
+      "source": "google",
+      "author": "Mark Reyes",
+      "rating": 4,
+      "text": "We made a reservation at 6 today, arriving 10 mins early, only to find the place is completely closed with no prior notice.\n\nDespite multiple attempts to contact them, via phone and Instagram, we received no response, which is incredibly frustrating and unprofessional, especially since we paid a week in advance. There was ZERO communication from the business beforehand, unlike what you'd expect from any responsible establishment.\n\nUPDATE:\nThey gave us a refund & a complimentary game for the mistake & miscommunication, which we appreciate. The host was very friendly and kind as well. We enjoyed the games!",
+      "date": "2025-05-29",
+      "reviewId": "AbFvOqloSR9wnffvVMC8yiJV0_ENqA_UF67_Tr_0GvDMMcsKvbDWKXmnEUs-EuoBumOoSky41o8u"
+    },
+    {
+      "id": "google:AbFvOqmanitq70ih0N-3dCePIkxfKetJNQyOTtSOOR1_4hOLV-zaphCH1ZwsXGSXFiMMvH3t8y4X3Q",
+      "source": "google",
+      "author": "Jimmy Zhang",
+      "rating": 5,
+      "text": "Great activities, really loved the theme of the decorations! Owner was very enthusiastic and helpful, definitely a fun experience",
+      "date": "2025-05-26",
+      "reviewId": "AbFvOqmanitq70ih0N-3dCePIkxfKetJNQyOTtSOOR1_4hOLV-zaphCH1ZwsXGSXFiMMvH3t8y4X3Q"
+    },
+    {
+      "id": "google:AbFvOqnvxz2UT2sXmguEfhg2ysbAOcQNovK4W-yAArReGT1lWbJ4tJ0sGjFM1v8D9QulZW2Xm1ik5A",
+      "source": "google",
+      "author": "Samantha Alvarez",
+      "rating": 5,
+      "text": "Ricky was an absolute amazing host!!! He was so kind and made the experience so much better!",
+      "date": "2025-05-26",
+      "reviewId": "AbFvOqnvxz2UT2sXmguEfhg2ysbAOcQNovK4W-yAArReGT1lWbJ4tJ0sGjFM1v8D9QulZW2Xm1ik5A"
+    },
+    {
+      "id": "google:AbFvOqmuv-SM2iYIWnLjfitQA6EIgSZSxaZHIcSJ-j6QVsZ6w_4wVkAirH1ztw0-gJ44jPfaVI2Q",
+      "source": "google",
+      "author": "Alma Pineda",
+      "rating": 5,
+      "text": "Ricky really took this experience from a 10/10 to an 11/10 and beyond. Every room was super fun with a good variety of games and levels of difficulty. Would highly recommend for anyone! The only downside is that there isn’t one local to us in Seattle :((( we’ll definitely have to visit whenever we are in SoCal",
+      "date": "2025-05-26",
+      "reviewId": "AbFvOqmuv-SM2iYIWnLjfitQA6EIgSZSxaZHIcSJ-j6QVsZ6w_4wVkAirH1ztw0-gJ44jPfaVI2Q"
+    },
+    {
+      "id": "google:AbFvOqlk7CpWtjz7T5NfVoo11_OJq_zlIWK3IrniTx9bbVmUGMh7UAClg1Xcpaa1Po6lNdn7YMdzEg",
+      "source": "google",
+      "author": "Mario Interiano",
+      "rating": 5,
+      "text": "Such a blast! I would 100%. Ricky was such an awesome host!",
+      "date": "2025-05-26",
+      "reviewId": "AbFvOqlk7CpWtjz7T5NfVoo11_OJq_zlIWK3IrniTx9bbVmUGMh7UAClg1Xcpaa1Po6lNdn7YMdzEg"
+    },
+    {
+      "id": "google:AbFvOqmhI-Zf6TgBCtJ0TnftBvkmdfpapKV0NLDO8kxgEYf9ascbTP6qSJWEVD0Egvdb0lO7ec5-hw",
+      "source": "google",
+      "author": "Biu Parse",
+      "rating": 5,
+      "text": "Ricky was great.Games were amazing will be back soon.",
+      "date": "2025-05-25",
+      "reviewId": "AbFvOqmhI-Zf6TgBCtJ0TnftBvkmdfpapKV0NLDO8kxgEYf9ascbTP6qSJWEVD0Egvdb0lO7ec5-hw"
+    },
+    {
+      "id": "google:AbFvOqkta67ywrjBb5V4o8_L6-zFQfj0d1QJoicb7U5byB97Oa94ERuGgybGglzzOgrrMvINf4buLg",
+      "source": "google",
+      "author": "Mariam Margaryan",
+      "rating": 5,
+      "text": "A Captivating Experience at Pixel Room\n\nFrom the moment I stepped into Pixel Room, I was immersed in a world of creativity, color, and pure fun. Every corner of this place is designed to inspire imagination and spark joy. It’s more than just a photo-worthy space — it’s an experience.\n\nWhat truly elevated my visit, though, was the staff. Warm, welcoming, and incredibly helpful, they made sure every moment felt personal and memorable. Whether it was offering tips for the best angles or simply sharing a smile, their passion for creating an unforgettable atmosphere was evident.\n\nPixel Room isn’t just a place to take pictures — it’s a space to make memories, express yourself, and feel like a work of art. I can’t recommend it enough, and I’ll definitely be back!",
+      "date": "2025-05-23",
+      "reviewId": "AbFvOqkta67ywrjBb5V4o8_L6-zFQfj0d1QJoicb7U5byB97Oa94ERuGgybGglzzOgrrMvINf4buLg"
+    },
+    {
+      "id": "google:AbFvOqnaK1oeVuFZfh88_Lu9TqprjPIZ9gU9H78jdPzz_02eVBqaHNx48A-MFX65RTnobpMb1nh-",
+      "source": "google",
+      "author": "Rana Afra",
+      "rating": 5,
+      "text": "Pros:\nPerfect for adults and kids.\nGreat customer service, kind, and thoughtful staff. Clear instructions for each room.\nVariety of games and enough time to play everything. We were never bored! Each room was different than the other. Fun music to keep you going. Something for everyone. We all enjoyed our time here. The floor is Lava was the best. The foam shoes are included with purchase of tickets. Make sure to wear comfy clothing. You’ll be running a lot. If you  like critical thinking, puzzles, Tetris, video games, team building games this place is for you. Fun fun fun.\n\nCons: found out very quickly how out of shape I was.",
+      "date": "2025-04-19",
+      "reviewId": "AbFvOqnaK1oeVuFZfh88_Lu9TqprjPIZ9gU9H78jdPzz_02eVBqaHNx48A-MFX65RTnobpMb1nh-"
+    },
+    {
+      "id": "google:AbFvOqn371ZLOC5hUp166MvyztmlqUTE9XPkeqtJsLNmuvCNxT6uK4QwovFWsmXOGxIpQqsqbXzw",
+      "source": "google",
+      "author": "Lori Li",
+      "rating": 5,
+      "text": "Super fun to play XD! Laser room is the BEST! Really suitable for friends gathering and spend the weekend! Hopefully there will be more levels in the future!\n\nBig Pro: they have on site parking! 👏\n\nI have also posted and recommended this on Xiaohongshu. I hope this great place could get more attention!\n\n(oh and I love their cute sticker hehe)",
+      "date": "2025-04-15",
+      "reviewId": "AbFvOqn371ZLOC5hUp166MvyztmlqUTE9XPkeqtJsLNmuvCNxT6uK4QwovFWsmXOGxIpQqsqbXzw"
+    },
+    {
+      "id": "google:AbFvOqmL1nAIAI97pXn8Y9BnqhoYLitD9G_Z5b0LAzGozqrRa-zLP_G0UNRWFx2BkXP_DD-eVw17Vw",
+      "source": "google",
+      "author": "Suzanne van der Kuil Kabbara",
+      "rating": 5,
+      "text": "We came here by coincidence with our 3 kids. We had the best time and Ricky made sure that everything was perfect. He was the nicest!!",
+      "date": "2025-04-12",
+      "reviewId": "AbFvOqmL1nAIAI97pXn8Y9BnqhoYLitD9G_Z5b0LAzGozqrRa-zLP_G0UNRWFx2BkXP_DD-eVw17Vw"
+    },
+    {
+      "id": "google:AbFvOqmEErWMP0iLHJL3BmkOfh77KALQV0i_iBp4I9kGK1k-rCKKw9uFq25AFNl2sDyA0RCh6gYp-w",
+      "source": "google",
+      "author": "Armen Khalatyan",
+      "rating": 5,
+      "text": "Super fun!",
+      "date": "2025-04-09",
+      "reviewId": "AbFvOqmEErWMP0iLHJL3BmkOfh77KALQV0i_iBp4I9kGK1k-rCKKw9uFq25AFNl2sDyA0RCh6gYp-w"
+    },
+    {
+      "id": "google:AbFvOqlm3ogtC2PAjygQvrfITn-87kSBZaPPZD402_CJi_Vqgf4zoGOi5NGcgu979EbPNRX9N6uo",
+      "source": "google",
+      "author": "Bryan Bakke",
+      "rating": 5,
+      "text": "Great place and great activities for groups and families! Ricky was a great host!!!",
+      "date": "2025-04-04",
+      "reviewId": "AbFvOqlm3ogtC2PAjygQvrfITn-87kSBZaPPZD402_CJi_Vqgf4zoGOi5NGcgu979EbPNRX9N6uo"
+    },
+    {
+      "id": "google:AbFvOqlmsoGeeOg4Y6el8DaA1YdSFGBlseAAmvIt-_J5ZN-kWu8T4yLe9MpxuG55bqkWp5_oAK7f_Q",
+      "source": "google",
+      "author": "Mirela Abinales",
+      "rating": 5,
+      "text": "Kids and adults had so much fun",
+      "date": "2025-04-03",
+      "reviewId": "AbFvOqlmsoGeeOg4Y6el8DaA1YdSFGBlseAAmvIt-_J5ZN-kWu8T4yLe9MpxuG55bqkWp5_oAK7f_Q"
+    },
+    {
+      "id": "google:AbFvOqmLQRd7Zs2-iACu5IZYpgJt0b5WdlsDwPAsmXsELZ3hCQ_wjamcj1tDi4AmhKp9PDKO1Fze0Q",
+      "source": "google",
+      "author": "Sam Chase",
+      "rating": 5,
+      "text": "Soooooo much fun here. The games were exciting and active. Even when we weren’t doing well, it was still a blast. Would definitely go again!",
+      "date": "2025-03-30",
+      "reviewId": "AbFvOqmLQRd7Zs2-iACu5IZYpgJt0b5WdlsDwPAsmXsELZ3hCQ_wjamcj1tDi4AmhKp9PDKO1Fze0Q"
+    },
+    {
+      "id": "google:AbFvOqnRMmqlRrb5nXt6F9M1RBw2bgz2UX9erG2kS2h0Wh36WIJSCn3mhvGpekSR_5ndT10Ppj9Mcw",
+      "source": "google",
+      "author": "Michael Perez",
+      "rating": 5,
+      "text": "So much fun! Feels like gamified exercise and a nice challenge for the brain.",
+      "date": "2025-03-30",
+      "reviewId": "AbFvOqnRMmqlRrb5nXt6F9M1RBw2bgz2UX9erG2kS2h0Wh36WIJSCn3mhvGpekSR_5ndT10Ppj9Mcw"
+    },
+    {
+      "id": "google:AbFvOqk2SnHNQxwqzcsAAUfbm3ypgPFZ30mt4EQ7uRELfKMe2DEp41Vf3lGPudFFyCewMWuMFA7CDA",
+      "source": "google",
+      "author": "Eddie Solano",
+      "rating": 5,
+      "text": "Awesome places, fun for the whole family. Amazing services.",
+      "date": "2025-03-23",
+      "reviewId": "AbFvOqk2SnHNQxwqzcsAAUfbm3ypgPFZ30mt4EQ7uRELfKMe2DEp41Vf3lGPudFFyCewMWuMFA7CDA"
+    },
+    {
+      "id": "google:AbFvOqnM5HlcE_6EoSqP0E2ZPGWufKtpslNFL4q5kAdo3sQnMChlI5BjwJ9tM33OMQc885b4mwK-",
+      "source": "google",
+      "author": "Michael Lorz",
+      "rating": 5,
+      "text": "This is crazy fun for all ages levels.  Very physical.  An hour is perfect.  Our fave was the Lazer Room!",
+      "date": "2025-03-21",
+      "reviewId": "AbFvOqnM5HlcE_6EoSqP0E2ZPGWufKtpslNFL4q5kAdo3sQnMChlI5BjwJ9tM33OMQc885b4mwK-"
+    },
+    {
+      "id": "google:AbFvOqmtsPJnyVqh1sky-lXaXz1c1KthLbC8P8_3S4xT69L9dCnVEjcuAdxypdx_Jo14peCEI0k-CQ",
+      "source": "google",
+      "author": "picamika13",
+      "rating": 5,
+      "text": "Really fun series of immersive game rooms. Imagine being inside of an arcade/squid game style rooms where you run around and use your brain at the same time. The game play is both cooperative and competitive depending on what you play. Good for all ages and has replay-ability. Will definitely be coming back.",
+      "date": "2025-03-16",
+      "reviewId": "AbFvOqmtsPJnyVqh1sky-lXaXz1c1KthLbC8P8_3S4xT69L9dCnVEjcuAdxypdx_Jo14peCEI0k-CQ"
+    },
+    {
+      "id": "google:AbFvOqnEfC6MLOEFvXz39RrdeU6StSAfmVycFNc3-USfQojNKBdIumGThAAIKP6Vk0zv9LEQ8BjF",
+      "source": "google",
+      "author": "Austin Welsh",
+      "rating": 5,
+      "text": "The ultimate party destination!",
+      "date": "2025-03-11",
+      "reviewId": "AbFvOqnEfC6MLOEFvXz39RrdeU6StSAfmVycFNc3-USfQojNKBdIumGThAAIKP6Vk0zv9LEQ8BjF"
+    },
+    {
+      "id": "google:AbFvOqkvjz-5Xj8j5L9c-E4SQJU6loXSpMtjaPHaH0uzr5WSsnVqeYXR8pDn6ex3NQb2K6orWrufSg",
+      "source": "google",
+      "author": "Gabriel Godoi",
+      "rating": 5,
+      "text": "So fun! Totally unique. Felt like I got sucked into an arcade game!",
+      "date": "2025-03-10",
+      "reviewId": "AbFvOqkvjz-5Xj8j5L9c-E4SQJU6loXSpMtjaPHaH0uzr5WSsnVqeYXR8pDn6ex3NQb2K6orWrufSg"
+    },
+    {
+      "id": "google:AbFvOqmdd3h7rjV0DL4g3H3S6pHAPkA60dfOeTC1jyDixSFlZ1oKWb-hFuI2RuOLQ-eX0i4_ob0fjA",
+      "source": "google",
+      "author": "Tatjana Sidjakina",
+      "rating": 5,
+      "text": "This place is seriously addicting. Came for a quick visit and ended up staying way longer than planned. The games are creative, fast-paced, and just pure fun. Already planning my next trip!🤩🔥",
+      "date": "2025-03-10",
+      "reviewId": "AbFvOqmdd3h7rjV0DL4g3H3S6pHAPkA60dfOeTC1jyDixSFlZ1oKWb-hFuI2RuOLQ-eX0i4_ob0fjA"
+    },
+    {
+      "id": "google:AbFvOqmHJY-ZKfafGmN1IAFfl0OX9S8Frw53xVQXVsDvFdpXucRNEROMy5WoOCjI1q67b00o7NShNg",
+      "source": "google",
+      "author": "Anthony Martincuks",
+      "rating": 5,
+      "text": "Honestly, one of the best entertainment spots I’ve been to in a long time. It’s different, engaging, and just pure fun. If you’re looking for something new to do in LA, this is it!",
+      "date": "2025-03-08",
+      "reviewId": "AbFvOqmHJY-ZKfafGmN1IAFfl0OX9S8Frw53xVQXVsDvFdpXucRNEROMy5WoOCjI1q67b00o7NShNg"
+    },
+    {
+      "id": "google:AbFvOqmCPhl4RTgecfFS1vZuy_U-7sQ4Ed-FruhVyCzXs3ILhYcqeIj1WIQ46OUwlsAAt1jD7BqAyg",
+      "source": "google",
+      "author": "Mike Zakarian (Gera)",
+      "rating": 5,
+      "text": "Nice place, I like it. Feel free to attend this Game Center! I had no idea what to expect, but this place totally blew me away! It’s like an arcade but way more immersive. We did a team event here, and even the most skeptical coworkers ended up loving it.",
+      "date": "2025-03-08",
+      "reviewId": "AbFvOqmCPhl4RTgecfFS1vZuy_U-7sQ4Ed-FruhVyCzXs3ILhYcqeIj1WIQ46OUwlsAAt1jD7BqAyg"
+    },
+    {
+      "id": "google:AbFvOqkGt6JSyJYX4R-afaKkJ7EGWt-8OHjLvowjjm0U2_uc0xShbZTwaE0XYcuHMDKHxBuxovLThg",
+      "source": "google",
+      "author": "Magbet Bunyatov",
+      "rating": 5,
+      "text": "Wow, this place is SO much fun! I admired this place when I came there with my friends! Can’t wait to come back!",
+      "date": "2025-03-08",
+      "reviewId": "AbFvOqkGt6JSyJYX4R-afaKkJ7EGWt-8OHjLvowjjm0U2_uc0xShbZTwaE0XYcuHMDKHxBuxovLThg"
+    },
+    {
+      "id": "google:AbFvOqkxT6yU-az2djSBaR6tbi3pWkD1-gxOmDlzuVmqlrnOnq_ZrknAXvfjt2VyLCM0-LPe72VTHA",
+      "source": "google",
+      "author": "Kate Grey",
+      "rating": 5,
+      "text": "Such a cool and unique experience! The laser maze was way harder than I expected (in a good way!), and the button room had us running like crazy. Perfect for a fun night out.",
+      "date": "2025-03-08",
+      "reviewId": "AbFvOqkxT6yU-az2djSBaR6tbi3pWkD1-gxOmDlzuVmqlrnOnq_ZrknAXvfjt2VyLCM0-LPe72VTHA"
+    },
+    {
+      "id": "google:AbFvOqlbmtlv3h2ARC5T4G5eRyOQ-RpOec3FfhFDzWXlmQt6x21-SUstMFACiiQfvAgU4zd-HHtPIA",
+      "source": "google",
+      "author": "Andrey Novikov",
+      "rating": 5,
+      "text": "Wow, this place is SO much fun! We came with a group of friends and had an absolute blast. The games are super interactive, and the whole space feels like stepping into a video game. Can’t wait to come back!",
+      "date": "2025-03-08",
+      "reviewId": "AbFvOqlbmtlv3h2ARC5T4G5eRyOQ-RpOec3FfhFDzWXlmQt6x21-SUstMFACiiQfvAgU4zd-HHtPIA"
+    },
+    {
+      "id": "google:AbFvOqnyFTy7v-6AWKIkRK-YX3l1rFajljvH44Mm5cu4peUrE3m0nMqp3fTPTiR473aavNPowRG_rg",
+      "source": "google",
+      "author": "Elmer Pyles",
+      "rating": 5,
+      "text": "I just got to play through the rooms and boy am I glad I did! Each room and experience got better and better! This space is perfect for gatherings of large groups as well. The staff are very accommodating and eager to provide exceptional customer service to everyone. If you're looking for the best spot to celebrate your next event, this is it! Be ready to sweat!",
+      "date": "2025-03-07",
+      "reviewId": "AbFvOqnyFTy7v-6AWKIkRK-YX3l1rFajljvH44Mm5cu4peUrE3m0nMqp3fTPTiR473aavNPowRG_rg"
     }
   ]
 }
