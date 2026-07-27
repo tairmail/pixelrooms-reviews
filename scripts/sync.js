@@ -32,7 +32,14 @@ function httpsGet(url, token) {
     const req = https.request({
       hostname: u.hostname, path: u.pathname + (u.search || ""), method: "GET",
       headers: { "Authorization": `Bearer ${token}`, "Accept": "application/json" }
-    }, res => { let d = ""; res.on("data", c => d += c); res.on("end", () => { try { resolve(JSON.parse(d)); } catch(e) { console.error("Response:", d.slice(0,200)); reject(e); } }); });
+    }, res => {
+      let d = "";
+      res.on("data", c => d += c);
+      res.on("end", () => {
+        try { resolve(JSON.parse(d)); }
+        catch(e) { console.error("Non-JSON response:", d.slice(0, 300)); reject(new Error("Non-JSON: " + d.slice(0,100))); }
+      });
+    });
     req.on("error", reject); req.end();
   });
 }
@@ -49,7 +56,7 @@ async function getAccessToken() {
 async function getAccountId(token) {
   const data = await httpsGet("https://mybusinessaccountmanagement.googleapis.com/v1/accounts", token);
   if (!data.accounts || data.accounts.length === 0) { console.error("No accounts:", JSON.stringify(data)); process.exit(1); }
-  return data.accounts[0].name;
+  return data.accounts[0].name; // "accounts/101292944228636094058"
 }
 
 async function getLocationName(token, accountId) {
@@ -60,35 +67,42 @@ async function getLocationName(token, accountId) {
   if (!data.locations || data.locations.length === 0) { console.error("No locations:", JSON.stringify(data)); process.exit(1); }
   const loc = data.locations.find(l => (l.title || "").toLowerCase().includes("pixel")) || data.locations[0];
   console.log(`Using location: ${loc.title} (${loc.name})`);
-  // loc.name = "accounts/xxx/locations/yyy" — extract just the location ID part
-  return loc.name;
+  // loc.name = "locations/847100332494857..." — need full path with account
+  // Build full resource name: accounts/xxx/locations/yyy
+  const locId = loc.name.replace("locations/", "");
+  const fullName = `${accountId}/locations/${locId}`;
+  console.log(`Full location path: ${fullName}`);
+  return fullName;
 }
 
 async function getAllReviews(token, locationName) {
-  // New API endpoint: https://mybusiness.googleapis.com/v4/{locationName}/reviews
-  // locationName format: accounts/xxx/locations/yyy
   const reviews = [];
   let pageToken = null;
+
+  // Try Google My Business API v4 with full account/location path
   do {
-    const qs = `pageSize=50${pageToken ? `&pageToken=${pageToken}` : ""}`;
+    const qs = `pageSize=50${pageToken ? `&pageToken=${encodeURIComponent(pageToken)}` : ""}`;
     const url = `https://mybusiness.googleapis.com/v4/${locationName}/reviews?${qs}`;
-    console.log(`Fetching: ${url}`);
-    const data = await httpsGet(url, token);
-    if (data.error) {
-      console.error("Reviews error:", JSON.stringify(data.error));
-      // Try alternative endpoint
-      console.log("Trying alternative endpoint...");
-      const url2 = `https://mybusinessreviews.googleapis.com/v1/${locationName}/reviews?${qs}`;
-      const data2 = await httpsGet(url2, token);
-      if (data2.error) { console.error("Alt error:", JSON.stringify(data2.error)); process.exit(1); }
-      for (const r of data2.reviews || []) reviews.push(r);
-      pageToken = data2.nextPageToken || null;
-    } else {
-      for (const r of data.reviews || []) reviews.push(r);
-      pageToken = data.nextPageToken || null;
+    console.log(`Fetching reviews from: ${url}`);
+
+    let data;
+    try {
+      data = await httpsGet(url, token);
+    } catch(e) {
+      console.error("v4 API failed:", e.message);
+      process.exit(1);
     }
+
+    if (data.error) {
+      console.error("API error:", JSON.stringify(data.error));
+      process.exit(1);
+    }
+
+    for (const r of data.reviews || []) reviews.push(r);
+    pageToken = data.nextPageToken || null;
     console.log(`Fetched ${reviews.length} reviews so far...`);
   } while (pageToken);
+
   return reviews;
 }
 
